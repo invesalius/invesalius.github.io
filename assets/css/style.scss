@@ -1,7 +1,7 @@
 //headers
 
-$header-bg-color: #4b759b;
-$header-bg-color-secondary: #4b759b;
+$header-bg-color: #4b759b !default;
+$header-bg-color-secondary: #4b759b !default;
 
-@import "{{ invesalius.theme }}";
+@import "{{ site.theme }}";
 
