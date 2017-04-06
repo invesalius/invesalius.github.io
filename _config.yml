@@ -2,5 +2,9 @@ theme: jekyll-theme-cayman
 gem "github-pages", group: :jekyll_plugins
 title: [InVesalius]
 description: [Open source software for reconstruction of medical images]
+excerpt_separator: <!--more-->
+markdown: kramdown
+exclude: [vendor]
 sass:
-    sass_dir: 'assets/css/'
+  sass_dir: _sass
+  style: compressed
