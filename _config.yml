@@ -2,4 +2,5 @@ theme: jekyll-theme-cayman
 gem "github-pages", group: :jekyll_plugins
 title: [InVesalius]
 description: [Open source software for reconstruction of medical images]
-scss_files: 'assets/css/stye.scss'
+sass:
+    sass_dir: 'assets/css/'
