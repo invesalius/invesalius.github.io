@@ -13,3 +13,5 @@ github_username:  invesalius
 
 # Build settings
 markdown: kramdown
+
+theme: jekyll-theme-minimal
