@@ -1,0 +1,20 @@
+<!-- Header -->
+<header id="header" class="skel-layers-fixed">     
+    <a href="{{ site.baseurl }}/" class="site-title" style="padding-top:5em;"><img src="/images/topo.png" alt="InVesalius" style="width:333px;height:47px;margin-top:6px; margin-left:8px;"/> </a>
+    <nav id="nav">
+        <ul>
+            <li><a href="{{ site.baseurl }}/">Home</a></li>
+            <li><a href="{{ site.baseurl }}/about.html">About</a></li>
+            <li><a href="{{ site.baseurl }}/download.html">Download</a></li>
+            <li><a href="{{ site.baseurl }}/publication.html">Publication</a></li>
+            <!-- <li><a href="{{ site.baseurl }}/no-sidebar.html">Screenshot</a></li> -->
+            <li><a href="{{ site.baseurl }}/contact.html">Contact/Support</a></li>
+            {% for page in site.pages %}
+                  {% if page.title %}
+                    <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                  {% endif %}
+            {% endfor %}
+            <!--  <li><a href="#" class="button special">Sign Up</a></li> -->
+        </ul>
+    </nav>
+</header>
