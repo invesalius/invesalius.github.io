@@ -3,6 +3,7 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
+
 <head>
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -14,6 +15,22 @@
     <script src="{{ site.baseurl }}/js/skel.min.js"></script>
     <script src="{{ site.baseurl }}/js/skel-layers.min.js"></script>
     <script src="{{ site.baseurl }}/js/init.js"></script>
+
+    <script>
+        function setTheme(themeUrl) {
+            var themeLink = document.getElementById('theme-link');
+            themeLink.href = themeUrl;
+            localStorage.setItem('theme', themeUrl);
+        }
+
+        var storedTheme = localStorage.getItem('theme');
+        if (storedTheme) {
+            var themeLink = document.getElementById('theme-link');
+            themeLink.href = storedTheme;
+        }
+    </script>
+
+    </script>
     <noscript>
         <link rel="stylesheet" href="{{ site.baseurl }}/css/skel.css" />
         <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />

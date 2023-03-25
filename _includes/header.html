@@ -14,6 +14,8 @@
                     <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                   {% endif %}
             {% endfor %}
+            {% include theme-switcher.html %}
+
             <!--  <li><a href="#" class="button special">Sign Up</a></li> -->
         </ul>
     </nav>

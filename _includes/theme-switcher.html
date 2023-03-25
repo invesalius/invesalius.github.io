@@ -1,0 +1,8 @@
+{% assign themes = site.data.themes %}
+{% if themes %}
+  <div id="theme-switcher">
+    {% for theme in themes %}
+      <a href="#" onclick="setTheme('{{ theme.url }}'); return false;">{{ theme.name }}</a>
+    {% endfor %}
+  </div>
+{% endif %}
