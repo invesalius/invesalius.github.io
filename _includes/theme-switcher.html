@@ -2,7 +2,8 @@
 {% if themes %}
   <div id="theme-switcher">
     {% for theme in themes %}
-      <a href="#" onclick="setTheme('{{ theme.url }}'); return false;">{{ theme.name }}</a>
+      <a href="javascript:setTheme('{{ theme.url }}')" class="button small {{ theme.name }}">{{ theme.name }}</a>
+
     {% endfor %}
   </div>
 {% endif %}
