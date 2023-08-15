@@ -41,7 +41,12 @@
         </div> 
         -->
         <ul class="copyright">
-            <li>&copy; InVesalius 2007-2017. All rights reserved.</li>
+            <li>&copy; InVesalius 2007-
+                <span id="copyright">
+                    <script>
+                        document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                    </script>
+                </span>. All rights reserved.</li>
             <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
             <li>Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
         </ul>
