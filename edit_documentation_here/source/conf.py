@@ -21,7 +21,7 @@ myst_enable_extensions = ["colon_fence"]
 templates_path = ['_templates']
 exclude_patterns = []
 
-
+numfig = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -47,4 +47,14 @@ html_theme_options = {
         }
    ]
    
+}
+
+latex_engine = 'xelatex'
+latex_elements = {
+    'papersize': 'a4paper',
+    'fontpkg': r'''
+    \setmainfont{Cochineal}[
+        Numbers={Proportional,OldStyle},
+    ]
+    '''
 }

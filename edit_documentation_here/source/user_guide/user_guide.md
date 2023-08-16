@@ -378,7 +378,7 @@ BMP, TIFF, JPEG and PNG formats.
 
 Under the File menu, click on Import DICOM or use the shortcut Ctrl+I.
 Additionally, DICOM files can be imported by clicking on the icon shown
-in [Figure](#dicom_import).
+in {numref}`dicom_import`.
 
 ```{figure} images/icons/file_import_original.png
 :name: dicom_import
@@ -388,7 +388,7 @@ Shortcut to DICOM import
 ```
 
 Select the directory containing the DICOM files, as in
-[Figure](#win_folder). InVesalius will search for files also in
+{numref}`win_folder`. InVesalius will search for files also in
 subdirectories of the chosen directory if they exist.
 
 Once the directory is selected, click **OK**.
@@ -402,7 +402,7 @@ Folder selection
 
 While InVesalius search for DICOM files in the directory, the loading
 progress of the scanned files is displayed, as shown in the
-[Figure](#win_import_file).
+{numref}`win_import_file`.
 
 ```{figure} images/invesalius_screen/import_load_files_en.png
 :name: win_import_file
@@ -412,7 +412,7 @@ Loading file status
 ```
 
 If DICOM files are found, a window open (shown
-[Figure](#win_import_window)) will open to select the patient and
+{numref}`win_import_window`) will open to select the patient and
 respective series to be opened. It is also possible to skip images for
 reconstruction.
 
@@ -426,7 +426,7 @@ Import window
 To import a series with all images present, click \"**+**"\ on the
 patient's name to expand the corresponding series. Double-click on the
 description of the series. See
-[Figure](#import_serie).
+{numref}`import_serie`.
 
 ```{figure} images/invesalius_screen/import_window_detail_en.png
 :name: import_serie
@@ -439,8 +439,8 @@ In some cases, when there is no computer with memory and/or satisfactory
 processing to work with large numbers of images in a series, it is
 recommended to skip some of them. To do this, click **once** with the
 **left** mouse button over the description of the series
-([Figure](#import_serie)) and select how many images will be
-skipped ([Figure](#skip_image)), then click **Import**.
+({numref}`import_serie`) and select how many images will be
+skipped ({numref}`skip_image`), then click **Import**.
 
 ```{figure} images/invesalius_screen/import_window_skip_slice_en.png
 :name: skip_image
@@ -452,7 +452,7 @@ Skip image option
 If there is an insufficient amount of available memory at the time of
 loading the images, it is recommended that the resolution of the slices
 be reduced to work with volumetric and surface visualization, as shown
-in [Figure](#resize_image). The slices will be resized according to
+in {numref}`resize_image`. The slices will be resized according to
 the percentage relative to the original resolution. For example, if each
 slice of the exam the dimension of 512 x 512 pixels and the \"Percentage
 of original resolution\" is suggested to be 60 %, each resulting image
@@ -470,7 +470,7 @@ If the image was obtained with the gantry tilted, it will be necessary to
 correct to avoid distortion of any reconstruction. InVesalius allows the
 user to do this easily. When importing an image with the gantry tilted a
 dialog will appear, showing the gantry tilt angle.
-([Figure](#gantry_tilt)). It is possible to change this value, but
+({numref}`gantry_tilt`). It is possible to change this value, but
 it is not recommended. Click on the **Ok** to do the correction. If you
 click on the **Cancel** button, the correction will not be done.
 
@@ -481,7 +481,7 @@ click on the **Cancel** button, the correction will not be done.
 Gantry tilt correction
 ```
 
-After the above procedure, a window will be displayed ([Figure](#prog_recons)) with reconstruction 
+After the above procedure, a window will be displayed ({numref}`prog_recons`) with reconstruction 
 (when images are stacked and interpolated).
 
 ```{figure} images/invesalius_screen/import_window_progress_en.png
@@ -495,7 +495,7 @@ Reconstruction progress
 
 To import Analyze files, under the **File** menu, click **Import other
 files**, then click on the **Analyze** option as show the
-[Figure](#analyze_menu).
+{numref}`analyze_menu`.
 
 ```{figure} images/invesalius_screen/import_analyze_menu_en.png
 :name: analyze_menu
@@ -505,7 +505,7 @@ Menu for importing images in analyze format.
 ```
 
 Select the Analyze file format (**.hdr**) and click on **Open**
-([Figure](#analyze_import)).
+({numref}`analyze_import`).
 
 ```{figure} images/invesalius_screen/import_analyze_window_en.png
 :name: analyze_import
@@ -518,7 +518,7 @@ Import analyze file format.
 
 To import NIfTI files, under the **File** menu, click **Import other
 files** and then click **NIfTI** as shown in
-[Figure](#import_nifti_menu_pt).
+{numref}`import_nifti_menu_pt`.
 
 ```{figure} images/invesalius_screen/import_nifti_menu_en.png
 :name: import_nifti_menu_pt
@@ -529,7 +529,7 @@ Menu to import images in NIfTI format
 
 Select the NIfTI file format (either **nii.gz** or **.nii**) then click
 **Open**
-([Figure](#import_nifti_window_pt)). If the file is in another
+({numref}`import_nifti_window_pt`). If the file is in another
 format as **.hdr**, select **all files(\*.\*)** option.
 
 ```{figure} images/invesalius_screen/import_nifti_window_en.png
@@ -543,7 +543,7 @@ Importing images in NIfTI format.
 
 To import PAR/REC file, under the **File** menu, click **Import other
 files**, and then click on **PAR/REC** as shown in
-[Figure](#import_parrec_menu_pt).
+{numref}`import_parrec_menu_pt`.
 
 ```{figure} images/invesalius_screen/import_parrec_menu_en.png
 :name: import_parrec_menu_pt
@@ -554,7 +554,7 @@ Menu for importing PAR/REC images
 
 Select PAR/REC file type with the file extension **.par** and click
 **Open**
-([Figure](#import_parrec_window_pt)). If the file has no extension,
+({numref}`import_parrec_window_pt`). If the file has no extension,
 select **all files(\*.\*)** option.
 
 ```{figure} images/invesalius_screen/import_parrec_window_en.png
@@ -572,7 +572,7 @@ formats if pixels present are represented in **grayscale**.
 
 To import, click on menu **File**, **Import other files\...** and then
 click on **TIFF, JPG, BMP, JPEG or PNG (µCT)** option as shown in the
-[Figure](#import_bmp_menu_pt).
+{numref}`import_bmp_menu_pt`.
 
 ```{figure} images/invesalius_screen/import_bmp_menu_en.png
 :name: import_bmp_menu_pt
@@ -582,7 +582,7 @@ Import images in BMP and others formats
 ```
 
 Select the directory that contains the files, as shown the
-[Figure](#import_bmp_select_folder). InVesalius will search for
+{numref}`import_bmp_select_folder`. InVesalius will search for
 files also in subdirectories of the chosen directory if they exist.
 
 Click on **OK**.
@@ -597,7 +597,7 @@ Folder selection
 While InVesalius is looking for TIFF, JPG, BMP, JPEG, or PNG files in
 the directory, the upload progress of the scanned files is displayed, as
 illustrated in
-[Figure](#import_bmp_load_pt).
+{numref}`import_bmp_load_pt`.
 
 ```{figure} images/invesalius_screen/import_bmp_load_en.png
 :name: import_bmp_load_pt
@@ -607,7 +607,7 @@ Checking and loading files status.
 ```
 
 If files in the desired formats are located, a window will open (shown
-in [Figure](#import_bmp_window_pt)) to display the files eligible for
+in {numref}`import_bmp_window_pt`) to display the files eligible for
 reconstruction. Images can also be skipped to remove files from the
 rebuild list. The files are sorted according to file names. It is
 recommended that the files are numbered according to the desired rebuild
@@ -632,7 +632,7 @@ re-building. In some cases, particularly where a computer with
 satisfactory memory and/or processing is unavailable, it may be
 advisable to skip some of them to retain adequate program functionality.
 To do this, select how many images to skip
-([Figure](#import_bmp_skip_pt)), then click **Import**.
+({numref}`import_bmp_skip_pt`), then click **Import**.
 
 ```{figure} images/invesalius_screen/import_bmp_skip_en.png
 :name: import_bmp_skip_pt
@@ -644,7 +644,7 @@ Importation window
 To reconstruct files of this type, a project name must be defined to
 indicate the orientation of the images (axial, coronal or sagittal),
 voxel spacing (*X*, *Y* and *Z*) in **mm** as shown in the
-[Figure](#import_bmp_spacing_pt). The voxel spacing in *X* is the
+{numref}`import_bmp_spacing_pt`. The voxel spacing in *X* is the
 pixel width of each image, *Y* the pixel length, and *Z* represents the
 distance of each slice (voxel height).
 
@@ -671,7 +671,7 @@ Import screen
 If insufficient memory is available when loading images, it is
 recommended to reduce the resolution of the slices to work with
 volumetric and surface visualization, as shown in
-[Figure](#import_bmp_resize_pt) window.The slices will be resized
+{numref}`import_bmp_resize_pt` window.The slices will be resized
 according to the percentage relative to the original resolution. For
 example, if each slice of the exam contains the dimension of 512 x 512
 pixels and the \"Percentage of the original resolution\" is suggested at
@@ -687,7 +687,7 @@ Image resize
 
 After the previous steps, wait a moment for the program to complete the
 multiplanar reconstruction as shown in
-[Figure](#import_bmp_mpr_pt).
+{numref}`import_bmp_mpr_pt`.
 
 ```{figure} images/invesalius_screen/import_window_progress_en.png
 :name: import_bmp_mpr_pt
@@ -706,7 +706,7 @@ tools. For image alignment, the rotation image tool can be used.
 
 It is possible to mirror the image. To do so, select the **Tools** menu,
 click **Image**, then **Flip** and click on one of the following options
-([Figure](#menu_img_mirroring_axis_pt)):
+({numref}`menu_img_mirroring_axis_pt`):
 
 -   Right - Left
 
@@ -721,7 +721,7 @@ click **Image**, then **Flip** and click on one of the following options
 Menu to activate flip image tool.
 ```
 
-[Figure](#mirror_axial) and [Figure](#mirror_axial_mirrored) show a comparison between the input image and
+{numref}`mirror_axial` and {numref}`mirror_axial_mirrored` show a comparison between the input image and
 the flipped image. All other orientations are also modified when the
 image is flipped.
 
@@ -745,7 +745,7 @@ The swap axes tool changes the image orientation, in the case that the
 image has been wrongly imported. To perform this, select the **Tools**
 menu, click **Image**, then **Swap Axes** and click on one of the
 following options
-([Figure](#menu_invert_axis)):
+({numref}`menu_invert_axis`):
 
 -   From Right-Left to Anterior-Posterior
 
@@ -753,8 +753,8 @@ following options
 
 -   From Anterior-Posterior to Top-Bottom
 
-The [Figure](#invert_axis_axial)
-and [Figure](#invert_axis_axial_inverted) show an example of an
+The {numref}`invert_axis_axial`
+and {numref}`invert_axis_axial_inverted` show an example of an
 image with inverted axes.
 
 ```{figure} images/invesalius_screen/menu_invert_axis_en.png
@@ -785,7 +785,7 @@ Images after swap axes - from Anterior-Posterior to Top-Bottom.
 If it is necessary to align the image with a certain point of reference,
 e.g. anatomical marker, use the reorient image tool. To open this tool, 
 select the **Tools** menu, click **Image**, then **Reorient Image**
-([Figure](#menu_img_reorient)).
+({numref}`menu_img_reorient`).
 
 
 ```{figure} images/invesalius_screen/menu_img_reorient_en.png
@@ -796,7 +796,7 @@ Menu to activate reorient image tool.
 ```
 
 When this tool is activated, a window is opened
-([Figure](#image_reorient_window)) showing orientation and by how
+({numref}`image_reorient_window`) showing orientation and by how
 many degrees the image was rotated.
 
 
@@ -821,7 +821,7 @@ The interpolation options are:
 
 Then, select the rotation point by keeping the **left** mouse button
 pressed between the two lines intersecting
-([Figure](#image_reorient_adjust_center)) at one orientation, e.g.
+({numref}`image_reorient_adjust_center`) at one orientation, e.g.
 axial, coronal or sagittal, and **drag** to the desired point.
 
 
@@ -835,11 +835,11 @@ Defining the axis of rotation of the image.
 To rotate the image, it is necessary to keep the **left** mouse button
 pressed and **drag** until the reference point or anatomical marker
 stays aligned with one of the lines
-([Figure](#image_reorient_rotated)). After the image is in the
+({numref}`image_reorient_rotated`). After the image is in the
 desired position, click **Apply** in the parameter window
-([Figure](#image_reorient_window)). This may take a few moments
+({numref}`image_reorient_window`). This may take a few moments
 depending on the image size.
-[Figure](#image_reorient_rotated_applied) shows an image
+{numref}`image_reorient_rotated_applied` shows an image
 successfully reoriented.
 
 
@@ -865,7 +865,7 @@ Rotated image after reorientation is done.
 When images are imported, InVesalius automatically shows its multiplanar
 reconstruction in the Axial, Sagittal and Coronal orientations, as well
 as a window for 3D manipulation, as seen in
-[Figure](#mpr).
+{numref}`mpr`.
 
 ```{figure} images/invesalius_screen/multiplanar_mask_window_en.png
 :name: mpr
@@ -879,13 +879,13 @@ segments an image.
 For example, soft tissue bones can be highlighted.
 The highlight is represented by the application of colors on a segmented
 structure so that the colors form a mask over an image highlighting the
-structure ([Figure](#mpr)).This is discussed in more detail in the following
+structure ({numref}`mpr`).This is discussed in more detail in the following
 sections.
 
 To hide the mask, use the data manager, located in the lower left corner
 of the screen. Select the **Masks** tab and click once using the
 **left** mouse button over the eye icon next to **\"Mask 1\"**, as shown
-in [Figure](#ger_masc).
+in {numref}`ger_masc`.
 
 
 ```{figure} images/invesalius_screen/data_mask_en.png
@@ -896,7 +896,7 @@ Mask manager
 ```
 
 The eye icon disappears, and the colors of the segmentation mask are
-hidden ([Figure](#mpr_sem_mask)).
+hidden ({numref}`mpr_sem_mask`).
 
 
 ```{figure} images/invesalius_screen/multiplanar_window_en.png
@@ -910,7 +910,7 @@ Multiplanar reconstruction without segmentation mask
 
 The axial orientation consists of cuts made transversally to the region
 of interest, i.e. parallel cuts to the axial plane of the human body. In
-[Figure](#axial_corte), an axial image of the skull region is
+{numref}`axial_corte`, an axial image of the skull region is
 displayed.
 
 ```{figure} images/invesalius_screen/axial_en.png
@@ -925,7 +925,7 @@ Axial slice
 The sagittal orientation consists of cuts made laterally in relation to
 the region of interest, i.e. parallel cuts to the sagittal plane of the
 human body, which divides it into the left and right portions. In
-[Figure](#sagittal_slice), a sagittal skull image is displayed.
+{numref}`sagittal_slice`, a sagittal skull image is displayed.
 
 ```{figure} images/invesalius_screen/sagital_en.png
 :name: sagittal_slice
@@ -938,7 +938,7 @@ Sagittal slice
 
 The coronal orientation is composed of cuts parallel to the coronal
 plane, which divides the human body into ventral and dorsal halves. In
-[Figure](#coronal_slice) is displayed a skull image in coronal
+{numref}`coronal_slice` is displayed a skull image in coronal
 orientation.
 
 
@@ -954,7 +954,7 @@ Coronal slice
 To find out the common point of intersection of the images in different 
 orientations, simply activate the \"Slices cross intersection\" feature
 with the shortcut icon located on the toolbar. See
-[Figure](#cross_icon).
+{numref}`cross_icon`.
 
 ```{figure} images/icons/cross.png
 :name: cross_icon
@@ -965,7 +965,7 @@ Shortcut to show common point between different orientations.
 
 When the feature is activated, two cross-sections that intersect
 perpendicularly are displayed on each image
-([Figure](#cross_all)). The intersection point of each pair of
+({numref}`cross_all`). The intersection point of each pair of
 segments represents the common point between different orientations.
 
 To modify the point, hold down the **left** mouse button and **drag**.
@@ -979,17 +979,17 @@ Common point between differents orientations.
 ```
 
 To deactivate the feature, simply click on the shortcut again
-([Figure](#cross_icon)). This feature can be used in conjunction
+({numref}`cross_icon`). This feature can be used in conjunction
 with the slice editor (which will be discussed later).
 
 ### Interpolation
 
 By default, the 2D images visualization is interpolated
-([Figure](#axial_interpoleted). To deactivate this feature, select the
+({numref}`axial_interpoleted`. To deactivate this feature, select the
 **View** menu and select **Interpolated slices**
-([Figure](#menu_interpoleted_image_pt)). It will then be possible
+({numref}`menu_interpoleted_image_pt`). It will then be possible
 to visualize each pixel individually as shown in
-[Figure](#axial_not_interpoleted).
+{numref}`axial_not_interpoleted`.
 
 **This interpolation is for visualization purposes only, and does not
 directly influence segmentation or 3D surface generation.**
@@ -1018,9 +1018,9 @@ Non-interpolated image visualization.
 ### Move
 
 To move an image on the screen, use the Move shortcut icon on the
-toolbar ([Figure](#move_icon)). Click on the icon to activate, then with
+toolbar ({numref}`move_icon`). Click on the icon to activate, then with
 the **left** mouse button on the image, it to the desired direction.
-[Figure](#move_img) shows a displaced (moved) image.
+{numref}`move_img` shows a displaced (moved) image.
 
 ```{figure} images/icons/tool_translate_original.png
 :name: move_icon
@@ -1039,7 +1039,7 @@ Displaced image.
 ### Rotate
 
 Images can be rotated by using the Rotate shortcut on the toolbar
-([Figure](#rot_icon)). To rotate an image, click on the icon and
+({numref}`rot_icon`). To rotate an image, click on the icon and
 then with the **left** mouse button **drag** clockwise or anticlockwise
 as required.
 
@@ -1070,7 +1070,7 @@ The main InVesalius window is divided into 4 sub-windows: axial,
 sagittal, coronal and 3D. Each of these can be maximized to occupy the
 entire area of the main window. To do this, simply **left** mouse click
 on the subwindow icon located in the **upper right corner**
-([Figure](#maximize_window)). To restore a maximized window to its
+({numref}`maximize_window`). To restore a maximized window to its
 previous size, simply click the icon again.
 
 ```{figure} images/invesalius_screen/maximize_sagital_mpr.png
@@ -1083,7 +1083,7 @@ Detail of a sub-window (Note the maximize icon in the upper right corner).
 #### Enlarging or Shrinking an Image
 
 To enlarge or shrink an image, click on the zoom shortcut icon in the
-toolbar ([Figure](#zoom_icon)). Hold down the **left** mouse button on the
+toolbar ({numref}`zoom_icon`). Hold down the **left** mouse button on the
 image and **drag** the mouse **up** to enlarge or **down** to shrink.
 
 ```{figure} images/icons/tool_zoom_original.png
@@ -1097,12 +1097,12 @@ Zoom shortcut
 
 To enlarge a certain image area, click on the \"Zoom based on
 selection\" icon in the toolbar
-([Figure](#zoom_icon_loc)). Position the mouse pointer at the
+({numref}`zoom_icon_loc`). Position the mouse pointer at the
 origin point of the selection, click and hold the **left** mouse button
 and **drag** it to the end selection point to form a rectangle
-([Figure](#zoom_select)). Once the left mouse button is released,
+({numref}`zoom_select`). Once the left mouse button is released,
 the zoom operation will be applied to the selected region
-([Figure](#zoom_applied)).
+({numref}`zoom_applied`).
 
 ```{figure} images/icons/tool_zoom_select_original.png
 :name: zoom_icon_loc
@@ -1125,6 +1125,7 @@ Area selected for zoom.
 Enlarged image.
 ```
 
+(brightness-and-contrast-windows)=
 ### Brightness and Contrast (Windows)
 
 To improve image visualization, the *window width* and *window level*
@@ -1135,7 +1136,7 @@ width of the scale (*window width*) to be used to display the images.
 
 The feature can be activated by the \"Brightness and Contrast\" shortcut
 icon in the toolbar. See
-[Figure](#window_level_shortcut).
+{numref}`window_level_shortcut`.
 
 ```{figure} images/icons/tool_contrast_original.png
 :name: window_level_shortcut
@@ -1151,7 +1152,7 @@ mouse (with the **left** button pressed) vertically: up to increase, or
 down to decrease contrast.
 
 To deactivate the feature, click again on the shortcut icon
-([Figure](#window_level_shortcut)).
+({numref}`window_level_shortcut`).
 
 Preset brightness and contrast patterns may be used with InVesalius.
 The table below lists some tissue types with their
@@ -1159,7 +1160,7 @@ respective brightness and contrast values. To use the presets, position
 the mouse cursor over an image and **right-click** to open a context
 menu, then select **Window width and level**, and click on the preset
 option according to the tissue type, as shown in
-[Figure](#window_level).
+{numref}`window_level`.
 
 ```{figure} images/invesalius_screen/menu_window_and_level_en.png
 :name: window_level
@@ -1204,7 +1205,7 @@ To change the view using a pseudo color, position the mouse cursor over
 the image and **right-click** to open a context menu on it. When the
 menu opens, select the entry **Pseudo color**, and then click on the
 desired pseudo color option, as shown in
-[Figure](#pseudo_color).
+{numref}`pseudo_color`.
 
 ```{figure} images/invesalius_screen/pseudo_menu_en.png
 :name: pseudo_color
@@ -1273,7 +1274,7 @@ that can be accessed as follows: Place the mouse over the image and
 **right-click** to open a context menu on it. When the menu opens,
 select the projection type option, and then click on the desired
 projection option, as shown in the
-[Figure](#menu_proj).
+{numref}`menu_proj`.
 
 ```{figure} images/invesalius_screen/menu_projection_en.png
 :name: menu_proj
@@ -1287,7 +1288,7 @@ Projection type menu
 Normal mode is the default view, showing the unmodified image as it was
 when acquired or customized previously with either brightness and
 contrast or pseudo color. Normal mode is shown below in
-[Figure](#proj_normal).
+{numref}`proj_normal`.
 
 ```{figure} images/invesalius_screen/multiplanar_window_en.png
 :name: proj_normal
@@ -1296,11 +1297,12 @@ contrast or pseudo color. Normal mode is shown below in
 Normal projection
 ```
 
+(maxip)=
 #### MaxIP
 
 MaxIP is also known as MIP (*Maximum Intensity Projection*). MaxIP
 selects only voxels that have maximum intensity among those visited as
-shown in [Figure](#proj_maxip). According to the amount of, or \"depth\" of
+shown in {numref}`proj_maxip`. According to the amount of, or \"depth\" of
 MaxIP, each voxel is visited in order of overlap, for example, to select
 MaxIP of the pixel (0, 0) consisting of 3 slices it is necessary to
 visit pixel (0, 0) of slices (1, 2, 3) and select the highest value.
@@ -1312,7 +1314,7 @@ visit pixel (0, 0) of slices (1, 2, 3) and select the highest value.
 MaxIP projection
 ```
 
-As shown in [Figure](#proj_maxip_qtd), the number of MaxIP images is set at
+As shown in {numref}`proj_maxip_qtd`, the number of MaxIP images is set at
 the bottom of each orientation image.
 
 ```{figure} images/invesalius_screen/multiplanar_window_maxip_number_en.png
@@ -1326,9 +1328,9 @@ Selection the amount of images that composes the MaxIP or MIP
 
 Unlike MaxIP, MinIP (*Minimum Intensity Projection*) selects only the
 voxels that have minimal intensity among those visited, as shown in
-[Figure](#proj_minIP). The image number selection comprising the
+{numref}`proj_minIP`. The image number selection comprising the
 projection is made at the bottom of each orientation image as shown in
-[Figure](#proj_maxip_qtd).
+{numref}`proj_maxip_qtd`.
 
 
 ```{figure} images/invesalius_screen/multiplanar_window_minip_en.png
@@ -1341,11 +1343,11 @@ MinIP projection
 #### MeanIP
 
 The MeanIP (*Mean Intensity Projection*) technique which is shown in the
-[Figure](#proj_meanIP) composes the projection by averaging voxels
+{numref}`proj_meanIP` composes the projection by averaging voxels
 visited in the same way as the MaxIP and MinIP methods. It is also
 possible to define how many images will compose the projection at the
 bottom of the image of each orientation as shown in
-[Figure](#proj_maxip_qtd).
+{numref}`proj_maxip_qtd`.
 
 ```{figure} images/invesalius_screen/multiplanar_window_mean_en.png
 :name: proj_meanIP
@@ -1354,6 +1356,7 @@ bottom of the image of each orientation as shown in
 MeanIP projection
 ```
 
+(mida)=
 #### MIDA
 
 The MIDA (*Maximum Intensity Difference Accumulation*) technique
@@ -1364,7 +1367,7 @@ volume. Each of the voxels visited has its accumulated value, but are
 taken into account only if the value is greater than previously visited
 values. Like MaxIP, one can select how many images are used to
 accumulate the values.
-[Figure](#proj_MIDA) shows an example of MIDA projection.
+{numref}`proj_MIDA` shows an example of MIDA projection.
 
 ```{figure} images/invesalius_screen/multiplanar_window_mida_en.png
 :name: proj_MIDA
@@ -1373,7 +1376,7 @@ accumulate the values.
 MIDA projection
 ```
 
-As [Figure](#proj_MIDA_inv) shows, it is possible to invert the order
+As {numref}`proj_MIDA_inv` shows, it is possible to invert the order
 that the voxels are visited by selecting the **Inverted order** option
 in the lower corner of the screen.
 
@@ -1389,7 +1392,7 @@ Inverted order MIDA projection
 The Contour MaxIP function consists of visualizing contours present in
 the projection generated with MaxIP
 technique ([MaxIP](#maxip)). An example is presented in
-[Figure](#proj_contorno_maxip).
+{numref}`proj_contorno_maxip`.
 
 ```{figure} images/invesalius_screen/multiplanar_window_contour_maxip_en.png
 :name: proj_contorno_maxip
@@ -1404,7 +1407,7 @@ The Contour MIDA function consists of visualizing contours present in
 the projection generated with the MIDA
 technique ([MIDA](#mida)). Like MIDA, you can reverse the order that the
 volume is visited, as shown in
-[Figure](#proj_contorno_mida).
+{numref}`proj_contorno_mida`.
 
 ```{figure} images/invesalius_screen/multiplanar_window_contour_mida_en.png
 :name: proj_contorno_mida
@@ -1432,7 +1435,7 @@ maximum thresholds.
 
 Thresholding segmentation is located on the InVesalius left-panel, item
 **2. Select region of interest**
-([Figure](#region_selection)).
+({numref}`region_selection`).
 
 ```{figure} images/invesalius_screen/segmentation_threshold_window_left_en.png
 :name: region_selection
@@ -1443,7 +1446,7 @@ Select region of interest -threshold.
 
 Before starting a segment, it is necessary to configure a mask. A mask is
 an image over to examine an image where the selected regions are colored
-([Figure](#region_selection_masc)).
+({numref}`region_selection_masc`).
 
 ```{figure} images/invesalius_screen/segmentation_threshold_axial_en.png
 :name: region_selection_masc
@@ -1453,7 +1456,7 @@ Mask - selected region in yellow.
 ```
 
 To change the threshold, use the image greyscale control
-([Figure](#region_selection_bar)). Move the *left* sliding control
+({numref}`region_selection_bar`). Move the *left* sliding control
 to change the initial threshold. Move the **right** sliding control to
 change the final threshold. It is also possible to input the desired
 threshold values in the text boxes in the left and right side of the
@@ -1470,7 +1473,7 @@ Selecting *pixels* with intensity between 226 and 3021 (Bone).
 
 It is also possible to select some predefined thresholding values based
 on some type of tissues, like those displayed in
-[Figure](#limiar_presets). Just select the desired tissue and the
+{numref}`limiar_presets`. Just select the desired tissue and the
 mask will automatically update.
 
 ```{figure} images/invesalius_screen/segmentation_threshold_presets_en.png
@@ -1484,7 +1487,7 @@ The table below shows thresholding values according to tissues and materials. Th
 indicates images obtained from medical tomographs. The range of gray
 values from images obtained from odontological tomographs is greater
 and non-regular. Thus, it is necessary to use sliding controls
-([Figure](#region_selection_bar)) to adjust the thresholding
+({numref}`region_selection_bar`) to adjust the thresholding
 values.
 
 **Table - Predefined thresholding values to some materials**
@@ -1509,7 +1512,7 @@ values.
 
 
 To create a new mask, click **Create new mask**
-([Figure](#shortcut_new_mask)). Then, click **Select region of
+({numref}`shortcut_new_mask`). Then, click **Select region of
 interest**.
 
 ```{figure} images/icons/object_add_original.png
@@ -1520,7 +1523,7 @@ Button to create a new mask.
 ```
 
 After clicking on this button, a dialog will be shown
-([Figure](#create_new_mask)). Select the desired threshold and
+({numref}`create_new_mask`). Select the desired threshold and
 click on **Ok**.
 
 ```{figure} images/invesalius_screen/segmentation_threshold_window_dialog_en.png
@@ -1535,7 +1538,7 @@ surface. The surface is formed by triangles. The following chapter will
 give more details about surfaces.
 
 Click on the **Create surface** button
-([Figure](#generate_surface)) to create a new surface. If there is
+({numref}`generate_surface`) to create a new surface. If there is
 a surface created, previously you may overwrite it with the new one. To
 do this, select the option **Overwrite last surface** before creating the
 new surface.
@@ -1549,7 +1552,7 @@ Create surface button.
 
 After a few moments the surface will be displayed at the 3D
 visualization window of InVesalius
-([Figure](#surface)).
+({numref}`surface`).
 
 ```{figure} images/invesalius_screen/surface_from_threshold.png
 :name: surface
@@ -1565,7 +1568,7 @@ applied to the whole image. Manual segmentation may be used to segment
 only an isolated region. Manual segmentation also allows users to add or
 remove some image regions from the segmentation. To use it, click on
 **Manual edition**
-([Figure](#advanced_edition)) to open the manual segmentation
+({numref}`advanced_edition`) to open the manual segmentation
 panel.
 
 ```{figure} images/invesalius_screen/segmentation_manual_label_en.png
@@ -1575,7 +1578,7 @@ panel.
 Icon to open the Manual segmentation panel.
 ```
 
-[Figure](#edition_slices_ref) shows the Manual segmentation panel.
+{numref}`edition_slices_ref` shows the Manual segmentation panel.
 
 ```{figure} images/invesalius_screen/segmentation_manual_window_en.png
 :name: edition_slices_ref
@@ -1586,7 +1589,7 @@ Manual segmentation panel.
 
 There are two brushes used for segmentation: a circle and a square.
 Click on the triangle icon (see
-[Figure](#brush_type)) to show brush types, then click on the
+{numref}`brush_type`) to show brush types, then click on the
 desired brush.
 
 ```{figure} images/invesalius_screen/segmentation_manual_pencil_type.png
@@ -1597,7 +1600,7 @@ Brush types.
 ```
 
 Brush sizes can also be adjusted, as shown in
-[Figure](#select_diameter).
+{numref}`select_diameter`.
 
 ```{figure} images/invesalius_screen/segmentation_manual_diameter.png
 :name: select_diameter
@@ -1615,7 +1618,7 @@ The following are available options when using brushes in InVesalius:
 -   **Threshold**: applies the thresholding locally, adding or removing
     a region inside or outside the threshold range.
 
-[Figure](#select_brush_operations) shows the available brush
+{numref}`select_brush_operations` shows the available brush
 operations.
 
 ```{figure} images/invesalius_screen/segmentation_manual_pencil_type_operation_type_en.png
@@ -1625,7 +1628,7 @@ operations.
 Brush operations.
 ```
 
-[Figure](#noise_amalgaman) shows an image with noise caused by the
+{numref}`noise_amalgaman` shows an image with noise caused by the
 presence of a dental prosthesis. Note the rays emerging from the dental
 arch: the thresholding segments the noise since its intensity is inside the threshold of bone.
 
@@ -1636,7 +1639,7 @@ arch: the thresholding segments the noise since its intensity is inside the thre
 Noisy image segmented with threshold.
 ```
 
-[Figure](#surface_amagaman) shows a surface created from that
+{numref}`surface_amagaman` shows a surface created from that
 segmentation.
 
 ```{figure} images/invesalius_screen/segmentation_manual_noise_amalgam_3d.jpg
@@ -1657,8 +1660,8 @@ In such cases, use the manual segmentation with the **erase** brush. Keep
 the **left** mouse button pressed while dragging the brush over the
 region to be removed (in mask).
 
-[Figure](#editor_amalgaman) shows the image from
-[Figure](#noise_amalgaman) after.
+{numref}`editor_amalgaman` shows the image from
+{numref}`noise_amalgaman` after.
 
 ```{figure} images/invesalius_screen/segmentation_manual_noise_amalgam_removed.jpg
 :name: editor_amalgaman
@@ -1675,9 +1678,9 @@ Surface generate after removing the noise.
 ```
 
 A surface can be generated after manual segmentation
-([Figure](#surface_edited_amalgaman)). Since it was used in the
+({numref}`surface_edited_amalgaman`). Since it was used in the
 manual segmentation procedure, when clicking on Create surface button, a
-dialog ([Figure](#new_surface_edited)) will be opened to select if the
+dialog ({numref}`new_surface_edited`) will be opened to select if the
 surface is created with the method **Binary** (blocky) or **Context
 aware smoothing** (smoother).
 
@@ -1697,7 +1700,7 @@ mountains. The markers are water source. The waters fill the watershed
 until the waters gather together, thus distinguishing a background from
 an object. To use Watershed segmentation, click on Watershed to open the
 watershed panel
-([Figure](#watershed_panel)).
+({numref}`watershed_panel`).
 
 ```{figure} images/invesalius_screen/segmentation_watershed_panel_en.png
 :name: watershed_panel
@@ -1729,9 +1732,9 @@ image with the values of window width and window level (not the raw
 image) which may result in better segmentation.
 
 Click on the button on the left side of the panel
-([Figure](#watershed_conf)) to access more watershed
+({numref}`watershed_conf`) to access more watershed
 configurations. This button will open a dialog
-([Figure](#watershed_janela_conf)). The method option allows 
+({numref}`watershed_janela_conf`). The method option allows 
 choosing the Watershed algorithm to be used to segment. It may be the
 conventional **Watershed** or **Watershed IFT**, which is based on the
 IFT (*Image Forest Transform*) method. In some cases, like brain
@@ -1763,13 +1766,13 @@ dialog.
 Normally the **Watershed** is applied only in one slice, not in the
 whole image. After adding the markers is possible to apply the watershed
 to the whole image by clicking on the button **Expand watershed to 3D**.
-[Figure](#watershed_2d) shows the result of watershed segmentation
+{numref}`watershed_2d` shows the result of watershed segmentation
 in a slice (2D) of brain image.
 
-[Figure](#watershed_3d) shows the segmentation expanded to the
+{numref}`watershed_3d` shows the segmentation expanded to the
 whole image (3D).
 
-[Figure](#watershed_2d) also shows the object markers (in light
+{numref}`watershed_2d` also shows the object markers (in light
 green), the background markers (in red) and the segmentation mask (in
 green) overlaying the selected regions (result).
 
@@ -1794,12 +1797,12 @@ image (3D).
 
 Region growing tool is accessed in the menu **Tools**, **Segmentation**,
 **Region growing**
-([Figure](#menu_segmentation_region_growing)). Before segmenting, 
+({numref}`menu_segmentation_region_growing`). Before segmenting, 
 select if the operation is in **2D - Actual slice** or **3D — All
 slices**. It is also necessary to select the connectivity: 4 or 8 to
 2D or 6, 18 or 26 to 3D. It's also necessary to select the method,
 which may be **Dynamic, Threshold, or Confidence**
-[Figure](#segmentation_region_growing_dinamic).
+{numref}`segmentation_region_growing_dinamic`.
 
 
 ```{figure} images/invesalius_screen/menu_segmentation_region_growing_en.png
@@ -1830,7 +1833,7 @@ selection:
     range deviation are selected. The option **Use WWWL** is default and
     takes into account the image with **window width** and **window
     level** applied not the raw one
-    ([Figure](#segmentation_region_growing_dinamic_parameter)).
+    ({numref}`segmentation_region_growing_dinamic_parameter`).
 
 ```{figure} images/invesalius_screen/segmentation_region_growing_dinamic_parameter_en.png
 :name: segmentation_region_growing_dinamic_parameter
@@ -1841,7 +1844,7 @@ Dynamic method parameters.
 
 -   **Threshold**: This method selects the pixels whose intensity are
     inside the minimum and maximum threshold
-    ([Figure](#segmentation_region_growing_limiar)).
+    ({numref}`segmentation_region_growing_limiar`).
 
 
 ```{figure} images/invesalius_screen/segmentation_region_growing_limiar_en.png
@@ -1859,7 +1862,7 @@ Adjust the threshold.
     the standard deviation from the selected pixels, then carries out
     the expansion. This process is repeated according to the
     **Iterations** parameter.
-    [Figure](#segmentation_region_growing_confidence_parameter)
+    {numref}`segmentation_region_growing_confidence_parameter`
     shows the parameters for this method.
 
 
@@ -1890,9 +1893,9 @@ masks. The boolean operations supported by InVesalius are:
 
 To use this tool, go to the **Tools**, menu, select **Mask**, and then
 Boolean operations as shown in
-[Figure](#booleano_menu). Select the first mask, the operation to
+{numref}`booleano_menu`. Select the first mask, the operation to
 be performed and the second mask as shown in
-[Figure](#booleano_janela) then click **OK**.
+{numref}`booleano_janela` then click **OK**.
 
 ```{figure} images/invesalius_screen/mask_operation_boolean_menu_en.png
 :name: booleano_menu
@@ -1932,10 +1935,11 @@ boolean operations.
 ```
 
 
+(mask-cleaning)=
 ### Mask Cleaning
 
 A mask can be cleaned, as shown in
-[Figure](#limpeza_mascara). This is recommended before inserting
+{numref}`limpeza_mascara`. This is recommended before inserting
 Watershed markers. This tool is located on the **Tools** menu. Select
 **Mask**, then **Clean mask**, or use the shortcut **CTRL+SHIFT+A**.
 
@@ -1953,9 +1957,9 @@ Segmentation may leave some unwanted holes. It's recommended to fill
 them because the surface generated from this mask may have some
 inconsistencies. To do this, access the menu **Tools**, **Mask**, **Fill
 holes manually**
-([Figure](#menu_mask_manual_fill_holes)). A dialog window will be
+({numref}`menu_mask_manual_fill_holes`). A dialog window will be
 shown
-([Figure](#mask_manual_fill_holes_window)) to configure the
+({numref}`mask_manual_fill_holes_window`) to configure the
 parameters.
 
 
@@ -1981,7 +1985,7 @@ connectivity may also be configured: 4 or 8 for 2D and 6, 18 and
 26 for 3D.
 
 After configuring the desired parameters, left-click on holes to fill
-them. [Figure](#mask_axial_with_hole) shows a mask with some holes and [Figure](#mask_axial_filled_hole) 
+them. {numref}`mask_axial_with_hole` shows a mask with some holes and {numref}`mask_axial_filled_hole` 
 the mask with the holes filled. 
 Click on the close button or close the dialog to deactivate this tool.
 
@@ -2003,11 +2007,11 @@ A mask with filled holes.
 
 To open this tool, go to the **Tools** menu, select **Mask** then **Fill
 holes automatically**
-([Figure](#menu_mask_automatic_fill_holes)). This will open a
+({numref}`menu_mask_automatic_fill_holes`). This will open a
 dialog to configure the parameters. This tool doesn't require the user
 to click on the holes they desire to fill. This tool will fill the holes based
 on the **max hole size parameter** given in number of voxels
-([Figure](#mask_automatic_fill_holes_window)).
+({numref}`mask_automatic_fill_holes_window`).
 
 ```{figure} images/invesalius_screen/menu_mask_automatic_fill_holes_en.png
 :name: menu_mask_automatic_fill_holes
@@ -2042,9 +2046,9 @@ After generating a surface, it is recommended to remove the unwanted
 disconnected parts from a mask. This way, the surface generation will use
 less RAM and make the process quicker. To remove any unwanted parts, go
 to the **Tools** menu, select **Mask** and then **Remove Parts**
-([Figure](#menu_mask_remove_part)). A dialog will be shown to
+({numref}`menu_mask_remove_part`). A dialog will be shown to
 configure the selection parameters
-([Figure](#mask_remove_parts_window)).
+({numref}`mask_remove_parts_window`).
 
 It's possible to select disconnected parts only on a mask slice (**2D -
 Actual slice**) or on all slices (**3D - All slices**); users may also
@@ -2078,7 +2082,7 @@ tool.
 
 To open the Select parts tool, access the **Tools** menu, select
 **Mask** then **Select parts**
-([Figure](#menu_mask_select_part)). A dialog will be shown to
+({numref}`menu_mask_select_part`). A dialog will be shown to
 configure the name of the new mask and the connectivity (6, 18
 or 26).
 
@@ -2086,8 +2090,8 @@ To select a region, **left-click** on a pixel; multiple regions can be
 selected. The selected region(s) will be shown with a red mask. After
 selecting all the wanted regions, click **OK** to create a new mask with
 the selected regions.
-[Figure](#mask_selected_part).a shows a region selected in red.
-[Figure](#mask_selected_part).b shows the selected region in a new
+{numref}`mask_selected_part_a` shows a region selected in red.
+{numref}`mask_selected_part_b` shows the selected region in a new
 mask.
 
 ```{figure} images/invesalius_screen/menu_mask_select_part_en.png
@@ -2106,10 +2110,20 @@ Dialog to configure the parameters of Select parts
 tool.
 ```
 
-<figure id="fig:mask_selected_part">
+```{figure} images/invesalius_screen/mask_axial_select_part_pt.png
+:name: mask_selected_part_a
+:align: center
 
-<figcaption>Example of mask region selection.</figcaption>
-</figure>
+Example of mask region selection.
+```
+
+```{figure} images/invesalius_screen/mask_axial_selected_part_pt.png
+:name: mask_selected_part_b
+:align: center
+
+Final image with only the selected region
+```
+
 
 ### Crop
 
@@ -2117,7 +2131,7 @@ The crop tool allows users to select and use a specific section of image
 of interest. This may reduce the amount of information needed to be
 processed when generating a surface. To open, access the **Tool** menu,
 then **Mask** and **Crop**
-([Figure](#menu_mask_crop)).
+({numref}`menu_mask_crop`).
 
 ```{figure} images/invesalius_screen/menu_mask_crop_en.png
 :name: menu_mask_crop
@@ -2129,6 +2143,7 @@ Menu open the Crop tool.
 A box allowing for the selection of a specific area will then be
 displayed.
 
+(surface-triangle-mesh)=
 ## Surface (Triangle mesh)
 
 InVesalius generates 3D surfaces based on image segmentation. A surface
@@ -2139,7 +2154,7 @@ case).
 The controls to configure a 3D surface are accessible on the left panel,
 under **3. Configure 3D surface**, **Surface properties** you have the
 controls to configure a 3D surface
-([Figure](#3d_surface_management)).
+({numref}`3d_surface_management`).
 
 
 ```{figure} images/invesalius_screen/surface_config_panel_en.png
@@ -2154,7 +2169,7 @@ configuration.
 
 News surfaces can be created using an already segmented mask. To do so,
 on the left panel under **3. Configure 3D surface**, click on the button
-shown in [Figure](#shortcut_new_surface).
+shown in {numref}`shortcut_new_surface`.
 
 ```{figure} images/icons/object_add_original.png
 :name: shortcut_new_surface
@@ -2165,7 +2180,7 @@ surface.
 ```
 
 After clicking this button, a dialog will be shown
-([Figure](#create_surface_1)). This dialog allows for the
+({numref}`create_surface_1`). This dialog allows for the
 configuration of the 3D surface created, including setting the quality
 of the surface, filling surface holes whilst keeping the largest
 connected region of the surface intact.
@@ -2275,7 +2290,7 @@ Surface generated with **Default**.
 The Transparency function allows for the displaying of a surface
 transparently. To do so, select the desired surface from the list of
 surfaces in the item **3. Configure 3D surface**, **Surface
-properties** ([Figure](#select_surface)).
+properties** ({numref}`select_surface`).
 
 
 ```{figure} images/invesalius_screen/surface_select_menu_en.png
@@ -2287,7 +2302,7 @@ selection.
 ```
 
 Then, to set the level of surface transparency, use the sliding control
-shown in [Figure](#select_transparency); the more to the right, the more
+shown in {numref}`select_transparency`; the more to the right, the more
 transparent the surface will be.
 
 
@@ -2299,7 +2314,7 @@ Selection of surface
 transparency.
 ```
 
-[Figure](#model_transparency) shows 2 surfaces: the external
+{numref}`model_transparency` shows 2 surfaces: the external
 surface in green has some level of transparency which permits seeing the
 internal surface in yellow.
 
@@ -2314,9 +2329,9 @@ transparency.
 ### Color
 
 Surface colors can be altered by selecting the surface
-([Figure](#select_surface)), and clicking on the colored button on
+({numref}`select_surface`), and clicking on the colored button on
 the right of the surface selection list.
-[Figure](#change_surface_color) displays this button, inside item
+{numref}`change_surface_color` displays this button, inside item
 **3. Configure 3D surface**, **Surface properties**.
 
 ```{figure} images/invesalius_screen/surface_button_select_color_yellow.png
@@ -2328,7 +2343,7 @@ color.
 ```
 
 A dialog will be shown
-([Figure](#button_select_color)). Select the desired color and
+({numref}`button_select_color`). Select the desired color and
 click on **OK**.
 
 ```{figure} images/invesalius_screen/surface_select_color_windows_so_en.png
@@ -2343,7 +2358,7 @@ dialog.
 
 To split disconnected surfaces, select **3. Configure 3D surface**,
 **Advanced options**
-([Figure](#advanced_tools)).
+({numref}`advanced_tools`).
 
 ```{figure} images/invesalius_screen/surface_painel_advanced_options_en.png
 :name: advanced_tools
@@ -2354,7 +2369,7 @@ options.
 ```
 
 The advanced options panel will be displayed
-([Figure](#advanced_tools_expanded)).
+({numref}`advanced_tools_expanded`).
 
 ```{figure} images/invesalius_screen/surface_split_en.png
 :name: advanced_tools_expanded
@@ -2368,7 +2383,7 @@ panel.
 
 The option **Select largest surface** selects, automatically, only
 surface with the greater volume. Click on the button illustrated in
-[Figure](#short_connectivity_largest). This operation creates new
+{numref}`short_connectivity_largest`. This operation creates new
 a surface with only the largest surface.
 
 
@@ -2381,7 +2396,7 @@ surface.
 ```
 
 As an example, the
-[Figure](#extract_most_region_1) shows a surface before **Select
+{numref}`extract_most_region_1` shows a surface before **Select
 the largest surface**.
 
 
@@ -2394,7 +2409,7 @@ surfaces.
 ```
 
 Whereas the
-[Figure](#extract_most_region2) shows the surface with the largest
+{numref}`extract_most_region2` shows the surface with the largest
 disconnected region separated.
 
 
@@ -2410,7 +2425,7 @@ separated.
 
 Another selection option is Select regions of interest. To do this
  operation, click on the button illustrated in
-[Figure](#short_connectivity_manual), then click on the desired
+{numref}`short_connectivity_manual`, then click on the desired
 disconnected surface regions you want to select. Next click on **Select
 regions of interest**. This operation will create a new surface with
 only the selected disconnected regions.
@@ -2424,7 +2439,7 @@ interest.
 ```
 
 As an example, the
-[Figure](#extract_most_region3) shows the surface created after
+{numref}`extract_most_region3` shows the surface created after
 the user selects the cranium and the right part of the tomograph
 support.
 
@@ -2440,7 +2455,7 @@ interest.
 
 Disconnected surface regions can also be split automatically. To do
 this, click on the button illustrated in
-[Figure](#connectivity_split_all).
+{numref}`connectivity_split_all`.
 
 
 ```{figure} images/icons/connectivity_split_all.png
@@ -2451,7 +2466,7 @@ Button to split all the disconnected regions
 surface.
 ```
 
-[Figure](#extrac_most_region_4) shows an example.
+{numref}`extrac_most_region_4` shows an example.
 
 ```{figure} images/invesalius_screen/surface_extract_most_region_4.jpg
 :name: extrac_most_region_4
@@ -2471,7 +2486,7 @@ measurements of volume and area on surfaces.
 
 To perform linear measurements, activate the feature by clicking on the
 shortcut shown below, located on the toolbar
-([Figure](#measure_line_original)).
+({numref}`measure_line_original`).
 
 ```{figure} images/icons/measure_line_original.png
 :name: measure_line_original
@@ -2487,8 +2502,8 @@ position the mouse pointer on the end point and click once again. The
 measurement is performed and the result is automatically displayed on
 the image or surface
 
-[Figure](#axial_linear) shows a 2D linear measure in the axial
-orientation, and [Figure](#3d_linear) shows another linear measure in 3D (surface).
+{numref}`axial_linear` shows a 2D linear measure in the axial
+orientation, and {numref}`3d_linear` shows another linear measure in 3D (surface).
 
 Once you have made a 2D linear measurement, it can be edited by placing
 the mouse on one end, holding down the **right mouse button** and
@@ -2516,7 +2531,7 @@ surface.
 
 An angular measurement in 2D on a surface (3D) can be done by clicking
 on the shortcut shown in
-[Figure](#atalho_angular).
+{numref}`atalho_angular`.
 
 
 ```{figure} images/icons/measure_angle_original.jpg
@@ -2535,8 +2550,8 @@ once again. Repeat the same actions to determine the endpoint of the
 angle C. The resulting measurement is displayed on the image or
 surface.
 
-[Figure](#axial_angular) illustrates an angular measurement on a
-flat image; [Figure](#axial_superficie) illustrates an angular measurement on
+{numref}`axial_angular` illustrates an angular measurement on a
+flat image; {numref}`axial_superficie` illustrates an angular measurement on
 a surface.
 
 In regard to 2D linear measurement, you can also edit the 2D angular
@@ -2568,7 +2583,7 @@ Volume and area measurements are made automatically when you create a
 new surface. These are displayed in the **Surfaces 3D** tab in the
 **Data** management panel, located in the bottom left corner of the
 screen, as illustrated in
-[Figure](#volumetric_measure).
+{numref}`volumetric_measure`.
 
 ```{figure} images/invesalius_screen/painel_volumetric_measures_en.png
 :name: volumetric_measure
@@ -2588,7 +2603,7 @@ segmentation and measurements. We can also show or hide and create or
 remove these elements in the **Data** management panel, located in the
 lower left corner of InVesalius. The panel is divided into 3 tabs:
 **Masks**, **3D Surfaces** and **Measurements**, as shown in
-[Figure](#volumetric_data) Each tab contains features
+{numref}`volumetric_data` Each tab contains features
 corresponding to the elements it refers to.
 
 ```{figure} images/invesalius_screen/painel_mask_manager_en.png
@@ -2604,7 +2619,7 @@ column of each line determines the visualization status of the listed
 element. The \"eye\" icon activates or deactivates the masks, surface or
 measurement displayed. When one of these elements is being displayed,
 its corresponding icon (as shown in
-[Figure](#disable_mask)) will also be visible.
+{numref}`disable_mask`) will also be visible.
 
 
 ```{figure} images/invesalius_screen/eye.jpg
@@ -2617,8 +2632,8 @@ visibility.
 
 Some operations may be performed with the data. For instance, to remove
 one element, first select its name, as shown in
-[Figure](#selected_mask). Next, click on the shortcut shown in
-[Figure](#delete_data).
+{numref}`selected_mask`. Next, click on the shortcut shown in
+{numref}`delete_data`.
 
 
 ```{figure} images/invesalius_screen/painel_selected_mask_en.png
@@ -2638,7 +2653,7 @@ data.
 ```
 
 To create a new mask, surface or measurement, click on the shortcut
-shown in [Figure](#new_data), provided that the corresponding tab is open.
+shown in {numref}`new_data`, provided that the corresponding tab is open.
 
 
 ```{figure} images/icons/data_new.png
@@ -2650,7 +2665,7 @@ New data.
 
 To duplicate data, select data to be duplicated and click in the
 shortcut shown in
-[Figure](#duplicate_data).
+{numref}`duplicate_data`.
 
 
 ```{figure} images/icons/data_duplicate.png
@@ -2665,7 +2680,7 @@ data.
 
 In the Name column, the mask's color and name are shown. The
 **Threshold** column shows the value range used to create the mask.
-[Figure](#volumetric_data) shows an example.
+{numref}`volumetric_data` shows an example.
 
 ### 3D Surface
 
@@ -2673,7 +2688,7 @@ In the **Name** column, the surface's color and name are shown. The
 **Volume** column shows the total surface volume. Finally, the
 **Transparency** column indicates the level of transparency for use for
 surface visualization.
-[Figure](#surface_manager) shows an example.
+{numref}`surface_manager` shows an example.
 
 ```{figure} images/invesalius_screen/painel_volumetric_measures_en.png
 :name: surface_manager
@@ -2687,8 +2702,8 @@ manager.
 
 We can also import STL, OBJ, PLY or VTP (VTK Polydata File Format) files
 into an active InVesalius project. To do so, click on the icon shown in
-[Figure](#import_stl), select the format of the corresponding
-file, ([Figure](#import_surface)) and click Open.
+{numref}`import_stl`, select the format of the corresponding
+file, ({numref}`import_surface`) and click Open.
 
 ```{figure} images/icons/load_mesh.png
 :name: import_stl
@@ -2712,7 +2727,7 @@ the color and measurement name. **Local** indicates where the
 measurement was taken (image axial, coronal, sagittal or 3D), and
 **Type** indicates the type of measurement (linear or angular). Finally,
 **Value** shows the measurement value.
-[Figure](#manager_mensuares) illustrates the **Measurements** tab.
+{numref}`manager_mensuares` illustrates the **Measurements** tab.
 
 ```{figure} images/invesalius_screen/painel_measures_manager_en.png
 :name: manager_mensuares
@@ -2726,7 +2741,7 @@ management.
 
 Images and surfaces can be viewed simultaneously by **left-clicking** on
 the shortcut
-([Figure](#slice_plane_original)) located in the lower right corner
+({numref}`slice_plane_original`) located in the lower right corner
 of the InVesalius interface.
 
 ```{figure} images/icons/slice_plane_original.png
@@ -2740,7 +2755,7 @@ viewing.
 This feature allows users to enable or disable the displaying of images
 in different orientations (or plans) within the same display window of
 the 3D surface. Simply check or uncheck the corresponding option in the
-menu shown in [Figure](#view_2d_3d_1).
+menu shown in {numref}`view_2d_3d_1`.
 
 ```{figure} images/invesalius_screen/view_2d_3d_1_en.png
 :name: view_2d_3d_1
@@ -2752,7 +2767,7 @@ display.
 
 It is worth noting that when a particular orientation is selected, a
 check is presented in the corresponding option. This is illustrated in
-[Figure](#view_2d_3d_2).
+{numref}`view_2d_3d_2`.
 
 
 ```{figure} images/invesalius_screen/view_2d_3d_2_en.png
@@ -2765,7 +2780,7 @@ display.
 
 If the surface is already displayed, the plans of the guidelines will be
 presented as shown in
-[Figure](#only_2d_planes). Otherwise, only the plans will be
+{numref}`only_2d_planes`. Otherwise, only the plans will be
 displayed.
 
 ```{figure} images/invesalius_screen/3d_planes.jpg
@@ -2785,8 +2800,9 @@ surface).
 ```
 
 To view the display of a plan, just uncheck the corresponding option in
-the menu ([Figure](#view_2d_3d_2)).
+the menu ({numref}`view_2d_3d_2`).
 
+(volume-rendering)=
 ## Volume Rendering
 
 For volume rendering models, InVesalius employs a technique known as
@@ -2800,12 +2816,12 @@ specific tissue types or different types of exam (tomographic contrast,
 for example).
 
 To access this feature, simply click the shortcut shown in
-[Figure](#volume_raycasting_origina) in the lower right corner of
+{numref}`volume_raycasting_origina` in the lower right corner of
 the screen (next to the surface display window) and select one of the
 available presets.
 
 To turn off volume rendering, click again on the path indicated by
-[Figure](#volume_raycasting_origina) and select the **Disable**
+{numref}`volume_raycasting_origina` and select the **Disable**
 option.
 
 
@@ -2854,7 +2870,7 @@ MIP.
 ### Standard Customization
 
 Some patterns can be personalized (and customized).
-[Figure](#customize_1) is exhibiting a pattern and some graphical
+{numref}`customize_1` is exhibiting a pattern and some graphical
 controls' adjustment. With these features, the color of a given structure
 and its opacity can be altered, determining if and how it will be
 displayed.
@@ -2869,11 +2885,11 @@ II.
 
 To hide a structure, use the control setting chart to decrease the
 opacity of the corresponding region. In the example in
-[Figure](#customize_1) suppose we want to hide the muscular part
+{numref}`customize_1` suppose we want to hide the muscular part
 (appearing in red). To do this, simply position the pointer over the
 muscular part in red and, using the left mouse button, drag the point
 down to reduce opacity and make the part transparent.
-[Figure](#customize_2) illustrates the result.
+{numref}`customize_2` illustrates the result.
 
 Note: The Alpha value indicates the opacity of the color and the
 **value**, the color intensity of the pixel.
@@ -2890,7 +2906,7 @@ We can also remove or add points on the graph control setting. To
 remove, simply click with the right mouse button on the point. To add a
 new point, click the left button on the line graph. One can also save
 the resulting pattern by clicking the shortcut shown in
-[Figure](#save_preset).
+{numref}`save_preset`.
 
 ```{figure} images/invesalius_screen/save_preset.png
 :name: save_preset
@@ -2901,7 +2917,7 @@ standard.
 ```
 
 To save the pattern, InVesalius displays a window like the one shown in
-[Figure](#save_window_preset). Enter a name for the custom pattern
+{numref}`save_window_preset`. Enter a name for the custom pattern
 and **click OK**. The saved pattern will be available for the next time
 the software is opened.
 
@@ -2919,7 +2935,7 @@ You can customize a pattern without using the graphical control settings
 presented in the previous section. This is done through the **brightness
 and contrast** controls on the toolbar. Activate these by clicking the
 icon shown in
-[Figure](#tool_contrast_original_vol).
+{numref}`tool_contrast_original_vol`.
 
 
 ```{figure} images/icons/tool_contrast_original.png
@@ -2946,7 +2962,7 @@ with **left button** pressed from the lower right to the upper left
 corner of the preview window. To remove tissue visualization, do the
 opposite, (i.e., drag the mouse diagonally from top left to bottom right
 with the left button pressed). See
-[Figure](#raycasting_add_2).
+{numref}`raycasting_add_2`.
 
 ```{figure} images/invesalius_screen/raycasting_add_2.PNG
 :name: raycasting_add_2
@@ -2960,7 +2976,7 @@ Raycasting.
 In volume rendering, the cut function is used to view a cross-section of
 a region. With a volume pattern selected, click **Tools**, and then
 click **Cut plane**
-([Figure](#activate_cut_plane)).
+({numref}`activate_cut_plane`).
 
 
 ```{figure} images/invesalius_screen/activate_cut_plane_en.png
@@ -2975,7 +2991,7 @@ An outline for cutting appears next to the volume. To make the cut, hold
 the left mouse button on the plane and drag the mouse. To rotate the
 plane, hold the left mouse button pressed on its edge and move the mouse
 in the desired direction as shown in
-[Figure](#cutted_image).
+{numref}`cutted_image`.
 
 
 ```{figure} images/invesalius_screen/cutted_image.png
@@ -2987,15 +3003,15 @@ plane.
 ```
 
 When finished using the function, click **Tools** and again click **Cut
-plane** ([Figure](#cutted_image)).
+plane** ({numref}`cutted_image`).
 
 ## Stereoscopic Visualization
 
 InVesalius supports stereoscopic visualization of 3D models. First, a
 surface (see [Surfaces](#surface-triangle-mesh)) or an active volumetric visualization (see
 [Volume rendering](#volume-rendering)) must be created. Then, click the icon (shown
-in [Figure](#ster)) on the bottom right part of the interface and choose the desired
-projection type ([Figure](#st_menu)).
+in {numref}`ster`) on the bottom right part of the interface and choose the desired
+projection type ({numref}`st_menu`).
 
 ```{figure} images/icons/3D_glasses.png
 :name: ster
@@ -3063,7 +3079,7 @@ others, to be used in other software.
 
 The menu to export data is located in the left panel of InVesalius,
 inside item **4. Export data** (displayed below in
-[Figure](#data_export)). If the menu is not visible, double-click
+{numref}`data_export`). If the menu is not visible, double-click
 with the **left** mouse button to expand the item.
 
 ```{figure} images/invesalius_screen/painel_data_export_en.png
@@ -3077,7 +3093,7 @@ data.
 ### Surface
 
 To export a surface, select it from the data menu as shown in
-[Figure](#data_export_selection).
+{numref}`data_export_selection`.
 
 ```{figure} images/invesalius_screen/painel_data_export_selection_en.png
 :name: data_export_selection
@@ -3088,7 +3104,7 @@ exported.
 ```
 
 Next, click on the icon shown in
-[Figure](#surface_export_original).
+{numref}`surface_export_original`.
 
 ```{figure} images/icons/surface_export_original.png
 :name: surface_export_original
@@ -3099,7 +3115,7 @@ surface.
 ```
 
 When the file window displays (as shown in
-[Figure](#export_data_window)), type the file name and select the
+{numref}`export_data_window`), type the file name and select the
 desired exported format. Finally, click **Save**.
 
 ```{figure} images/invesalius_screen/export_surface_en.png
@@ -3131,7 +3147,7 @@ Files formats available for exportation in InVesalius are listed in the table be
 
 Images exhibited in any orientation (axial, coronal, sagittal and 3D)
 can be exported. To do so, **left-click** on the shortcut shown in
-[Figure](#menu_save_image_window) and select the sub-window
+{numref}`menu_save_image_window` and select the sub-window
 related to the target image to be exported.
 
 
@@ -3144,7 +3160,7 @@ images.
 ```
 
 On the window shown
-([Figure](#save_image_window)), select the desired file format,
+({numref}`save_image_window`), select the desired file format,
 then click **Save**.
 
 
@@ -3164,7 +3180,7 @@ shown as follows.
 ### Tools Menu
 
 To hide/show the side tools menu, click the button shown in
-[Figure](#layout_full_original).
+{numref}`layout_full_original`.
 
 ```{figure} images/icons/layout_full_original.png
 :name: layout_full_original
@@ -3176,7 +3192,7 @@ menu.
 
 With the menu hidden, the image visualization area in InVesalius is
 expanded, as shown in
-[Figure](#closed_tool_menu).
+{numref}`closed_tool_menu`.
 
 ```{figure} images/invesalius_screen/window_mpr_not_painels_en.png
 :name: closed_tool_menu
@@ -3190,7 +3206,7 @@ hidden.
 
 To automatically set the visualization position of a volume or surface,
 click on the icon shown in
-[Figure](#3d_automatic_position) (located in the inferior right
+{numref}`3d_automatic_position` (located in the inferior right
 corner of InVesalius screen) and choose one of the available options for
 visualization.
 
@@ -3206,7 +3222,7 @@ positioning.
 
 To change the background color of the volume/surface window, click on
 the shortcut shown in
-[Figure](#button_select_color_2). The shortcut is also located in
+{numref}`button_select_color_2`. The shortcut is also located in
 the lower right corner of the InVesalius screen.
 
 ```{figure} images/invesalius_screen/colour_button_en.png
@@ -3218,7 +3234,7 @@ window.
 ```
 
 A window for color selection opens
-([Figure](#color_window_background)). Next, simply click over the
+({numref}`color_window_background`). Next, simply click over the
 desired color and then click **OK**.
 
 
@@ -3230,7 +3246,7 @@ Background color
 selection.
 ```
 
-[Figure](#background_color) illustrates an InVesalius window with
+{numref}`background_color` illustrates an InVesalius window with
 the background color changed.
 
 
@@ -3245,7 +3261,7 @@ modified.
 ### Show/Hide Text in 2D Windows
 
 To show or hide text in 2D image windows, click on the shortcut
-illustrated in [Figure](#text) on the toolbar.
+illustrated in {numref}`text` on the toolbar.
 
 
 ```{figure} images/icons/text.png
@@ -3256,7 +3272,7 @@ Shorcut to show or hide
 texts.
 ```
 
-[Figure](#text_on) and [Figure](#text_off) show text enabled and disabled, respectively.
+{numref}`text_on` and {numref}`text_off` show text enabled and disabled, respectively.
 
 
 ```{figure} images/invesalius_screen/axial_en.png
