@@ -140,10 +140,7 @@ by its high cost. InVesalius Navigator offers users a low-cost,
 open-source alternative to commercial neuronavigation systems. In this
 sense, it is possible to use specific tools for neuronavigation and
 still have the possibility of developing features on demand. The
-software for neuronavigation is distributed in an executable version
-compatible with Windows 7, 8 and 10 operating system. Section 
-[about neuronavigation](#neuronavigation) goes into details of 
-the neuronavigation features of InVesalius.
+software for neuronavigation is distributed in an executable version compatible with Windows 7, 8 and 10 operating system. 
 
 ### Software and Hardware Requirements
 
