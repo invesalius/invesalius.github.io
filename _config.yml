@@ -15,3 +15,6 @@ github_username:  invesalius
 markdown: kramdown
 
 theme: jekyll-theme-minimal
+
+include: ["_images", "_sources", "_sphinx_design_static", "_static"]
+exclude: ["edit_documentation_here", "documentation_preview"]

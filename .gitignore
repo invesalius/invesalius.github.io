@@ -1,3 +1,9 @@
 _site/
 .sass-cache/
 .jekyll-metadata
+.DS_Store
+edit_documentation_here/.venv
+documentation_preview/
+Gemfile
+Gemfile.lock
+.idea
