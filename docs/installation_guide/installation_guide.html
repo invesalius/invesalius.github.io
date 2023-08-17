@@ -1,0 +1,832 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Installation &#8212; InVesalius3 2023-07-03 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=ae9c0d9e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=cb03d389"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'installation_guide/installation_guide';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User Manual" href="../user_guide/user_guide.html" />
+    <link rel="prev" title="About InVesalius" href="../abstract/abstract.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/inv_logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/inv_logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../abstract/abstract.html">
+                        About
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Developer Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/user_guide.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/invesalius/invesalius3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../abstract/abstract.html">
+                        About
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Developer Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/user_guide.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/invesalius/invesalius3" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Installation</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h1>
+<br/>
+The developer version of InVesalius runs on Windows, macOS, and Linux operating systems. 
+On this page, instructions to installing and running InVesalius on these systems can be found.
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h2>
+<p>These instructions are tested on Windows 10 64 bits.
+The packages required by InVesalius can be installed either through a Python system
+installation or the Anaconda package manager.
+In both cases, the following prerequisites apply:</p>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Visual Studio (We are using the 2019 community edition).</p>
+<ul>
+<li><p>It’s possible to install using <a class="reference external" href="https://chocolatey.org/">chocolatey</a>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>choco<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>visualstudio2019buildtools
+<span class="w"> </span>choco<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>visualstudio2019-workload-vctools
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Download InVesalius source code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>https://github.com/invesalius/invesalius3
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="python-installation">
+<h3>Python Installation<a class="headerlink" href="#python-installation" title="Permalink to this heading">#</a></h3>
+<section id="python-system-installation">
+<h4>Python System Installation<a class="headerlink" href="#python-system-installation" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Download and install Python 3.8 from the <a class="reference external" href="https://www.python.org/downloads/">Python website</a>.</p></li>
+<li><p>Install InVesalius main dependencies (<strong>WXPython</strong>, <strong>numpy</strong>, <strong>scipy</strong>, <strong>scikit-image</strong>,
+<strong>ImageIO</strong>, <strong>H5Py</strong>, <strong>Pillow</strong>, <strong>Pyserial</strong>, <strong>PSUtil</strong>, <strong>nibabel</strong>, <strong>configparser</strong>,
+<strong>PyPubsub</strong>, <strong>plaidml</strong> and <strong>Cython</strong>) using pip:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>If you are going to use the neuronavigation features, install the wrappers to the tracking devices:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pyclaron<span class="w"> </span>polhemusFT<span class="w"> </span>polhemus<span class="w"> </span>pypolaris<span class="w"> </span>pypolarisP4
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Optional:</strong> To take advantage of the real-time tractography computation during neuronavigation,
+the package <a class="reference external" href="https://dmritrekker.github.io/">Trekker</a> is required.
+The following command downloads and install the pre-generated wheel for Python 3.7:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>https://github.com/dmritrekker/trekker/raw/master/binaries/Trekker-0.9-cp38-cp38-win_amd64.whl
+</pre></div>
+</div>
+</section>
+<section id="anaconda-installation">
+<h4>Anaconda Installation<a class="headerlink" href="#anaconda-installation" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Install <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a>, preferably the 64-bit version.</p></li>
+<li><p>In the Anaconda Powershell, navigate to the cloned InVesalius source code folder, for example:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\%</span>USERNAME%<span class="se">\r</span>epository<span class="se">\i</span>nvesalius3<span class="se">\</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Install the required packages with the following command:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml<span class="w"> </span>--name<span class="w"> </span>invesalius
+</pre></div>
+</div>
+<p>This will create a virtual environment named <strong>invesalius</strong>. To activate it:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>invesalius
+</pre></div>
+</div>
+</section>
+</section>
+<section id="compiling-invesalius">
+<h3>Compiling InVesalius<a class="headerlink" href="#compiling-invesalius" title="Permalink to this heading">#</a></h3>
+<p>Some algorithms of InVesalius are written in Cython for performance. It’s needed to compile them.
+Open the command prompt of your Visual Studio and go to the InVesalius source code directory,
+then compile using this command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>setup.py<span class="w"> </span>build_ext<span class="w"> </span>--inplace
+</pre></div>
+</div>
+</section>
+<section id="running-invesalius">
+<h3>Running InVesalius<a class="headerlink" href="#running-invesalius" title="Permalink to this heading">#</a></h3>
+<p>Inside InVesalius source code directory run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>:warning: If using Anaconda, remember to always open the Anaconda Powershell and activate the
+environment before running the above command.</p>
+</section>
+</section>
+<section id="macos">
+<h2>MacOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h2>
+<p>This guide is based on <strong>High Sierra</strong>.</p>
+<section id="id1">
+<h3>Prerequisites<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>The first step is the installation of <strong>homebrew</strong>.
+Access the homebrew site to know how to <a class="reference external" href="http://brew.sh/">install it</a>.</p>
+<p>We recommend installing the python3 from brew, also install <strong>OpenMP</strong> (we use it):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">python3</span> <span class="n">libomp</span>
+</pre></div>
+</div>
+<p>If you are working with an Apple Silicon Mac, you also have to install the <code class="docutils literal notranslate"><span class="pre">hdf5</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">hdf5</span>
+</pre></div>
+</div>
+<p>Clone <strong>InVesalius 3</strong> using git:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>https://github.com/invesalius/invesalius3
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h3>Installation<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>To run the following commands your shell must be inside the <code class="docutils literal notranslate"><span class="pre">InVesalius</span></code> folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">invesalius3</span>
+</pre></div>
+</div>
+<p>Install InVesalius main dependencies <strong>wxpython</strong>, <strong>numpy</strong>, <strong>scipy</strong>, <strong>VTK</strong>, <strong>GDCM</strong>, <strong>imageio</strong>,
+<strong>scikit-image</strong>, <strong>Pillow</strong>, <strong>Pyserial</strong>, <strong>PSUtil</strong>, <strong>nibabel</strong>, <strong>configparser</strong>, <strong>H5py</strong>, <strong>PyPubsub</strong>
+and <strong>plaidml</strong> using pip:</p>
+<ol class="arabic simple">
+<li><p>If using Mac with Intel:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>If using Mac with Apple Silicon:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements_m1</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>Compiling InVesalius<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>If you are using Mac with Apple Silicon, you need to export some environment variable before the next step:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-I/opt/homebrew/opt/libomp/include&quot;</span>
+<span class="n">export</span> <span class="n">CPPFLAGS</span><span class="o">=</span><span class="s2">&quot;-I/opt/homebrew/opt/libomp/include&quot;</span>
+<span class="n">export</span> <span class="n">LDFLAGS</span><span class="o">=</span><span class="s2">&quot;-L/opt/homebrew/opt/libomp/lib&quot;</span>
+</pre></div>
+</div>
+<p>Compile the cython packages used by InVesalius:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>setup.py<span class="w"> </span>build_ext<span class="w"> </span>--inplace
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>Running Invesalius<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>Now your system is ready to run InVesalius directly from the source code. Just enter the InVesalius 3 source and run it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>If you have this error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">program</span> <span class="n">needs</span> <span class="n">access</span> <span class="n">to</span> <span class="n">the</span> <span class="n">screen</span><span class="o">.</span> <span class="n">Please</span> <span class="n">run</span> <span class="k">with</span> <span class="n">a</span>
+<span class="n">Framework</span> <span class="n">build</span> <span class="n">of</span> <span class="n">python</span><span class="p">,</span> <span class="ow">and</span> <span class="n">only</span> <span class="n">when</span> <span class="n">you</span> <span class="n">are</span> <span class="n">logged</span> <span class="ow">in</span>
+<span class="n">on</span> <span class="n">the</span> <span class="n">main</span> <span class="n">display</span> <span class="n">of</span> <span class="n">your</span> <span class="n">Mac</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Run InVesalius using this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pythonw</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">#</a></h2>
+<section id="packages-debian-and-ubuntu">
+<h3>Packages Debian and Ubuntu<a class="headerlink" href="#packages-debian-and-ubuntu" title="Permalink to this heading">#</a></h3>
+<p>InVesalius is already packaged and is in the main repos from Debian and Ubuntu. Install it using this command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>invesalius
+</pre></div>
+</div>
+<p>If you want the most updated packages, there is
+also a <a class="reference external" href="https://launchpad.net/~tfmoraes/+archive/ubuntu/invesalius">PPA</a> to Ubuntu:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:tfmoraes/invesalius
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>invesalius
+</pre></div>
+</div>
+<p>After the installation, InVesalius appears in your system menu. You can also run it from the command line:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>invesalius3
+</pre></div>
+</div>
+</section>
+<section id="other-distros">
+<h3>Other Distros<a class="headerlink" href="#other-distros" title="Permalink to this heading">#</a></h3>
+<p>InVesalius is packaged as <a class="reference external" href="https://flathub.org/apps/details/br.gov.cti.invesalius">Flatpak</a>.
+First, you need to add the Flathub repo:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>flathub<span class="w"> </span>https://flathub.org/repo/flathub.flatpakrepo
+</pre></div>
+</div>
+<p>Then install InVesalius:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>br.gov.cti.invesalius
+</pre></div>
+</div>
+<p>After the installation, InVesalius appears in your system menu. You can also run it from the command line:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>flatpak<span class="w"> </span>run<span class="w"> </span>br.gov.cti.invesalius
+</pre></div>
+</div>
+</section>
+<section id="source-code">
+<h3>Source Code<a class="headerlink" href="#source-code" title="Permalink to this heading">#</a></h3>
+<p>Use this command to get InVesalius source code from GitHub:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>https://github.com/invesalius/invesalius3
+</pre></div>
+</div>
+<section id="installing-dependencies">
+<h4>Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this heading">#</a></h4>
+<section id="using-pip-packages-recommended">
+<h5>Using PIP Packages (recommended)<a class="headerlink" href="#using-pip-packages-recommended" title="Permalink to this heading">#</a></h5>
+<p>First, you have to install some system packages to compile wxPython and H5py:</p>
+<ul class="simple">
+<li><p>Fedora (tested on Fedora 34)</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dnf<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gcc-c++<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>freeglut-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gstreamer1-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gstreamer1-plugins-base-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gtk3-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libjpeg-turbo-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libnotify-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libpng-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libSM-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libtiff-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libXtst-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>SDL-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>webkit2gtk3-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>which<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>hdf5-devel
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ubuntu (tested on Ubuntu 20.10 and 21.04)</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>freeglut3<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>freeglut3-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libgl1-mesa-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libglu1-mesa-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libgstreamer-plugins-base1.0-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libgtk-3-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libjpeg-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libnotify-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libsdl2-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libsm-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libtiff-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libwebkit2gtk-4.0-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libxtst-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>libhdf5-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>build-essential<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-venv
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Arch</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>pacman<span class="w"> </span>-syu<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>wxgtk3<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>glu<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>mesa<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>webkit2gtk
+</pre></div>
+</div>
+<p>It’s recommended to create a virtualenv:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Go to InVesalius folder</span>
+<span class="nb">cd</span><span class="w"> </span>invesalius3
+<span class="c1"># Create my_env environment</span>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>my_env
+<span class="c1"># Activate it every time you want to run InVesalius</span>
+<span class="nb">source</span><span class="w"> </span>my_env/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="using-system-packages">
+<h5>Using System Packages<a class="headerlink" href="#using-system-packages" title="Permalink to this heading">#</a></h5>
+<section id="debian-and-ubuntu-tested-in-ubuntu-20-04">
+<h6>Debian and Ubuntu (Tested in Ubuntu 20.04)<a class="headerlink" href="#debian-and-ubuntu-tested-in-ubuntu-20-04" title="Permalink to this heading">#</a></h6>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-wxgtk4.0</span> <span class="pre">python3-numpy</span> <span class="pre">python3-scipy</span> <span class="pre">python3-pil</span> <span class="pre">python3-matplotlib</span> <span class="pre">python3-skimage</span> <span class="pre">python3-nibabel</span> <span class="pre">python3-serial</span> <span class="pre">python3-psutil</span> <span class="pre">python3-vtk7</span> <span class="pre">python3-vtkgdcm</span> <span class="pre">python3-gdcm</span> <span class="pre">cython3</span> <span class="pre">python3-h5py</span> <span class="pre">python3-imageio</span> <span class="pre">python3-keras</span> <span class="pre">python3-pubsub</span></code></p>
+<p>Ubuntu don’t have PlaidML in their repositories, so install it using <strong>pip</strong>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">plaidml-keras</span></code></p>
+</section>
+</section>
+<section id="fedora-tested-in-fedora-32">
+<h5>Fedora (Tested in Fedora 32)<a class="headerlink" href="#fedora-tested-in-fedora-32" title="Permalink to this heading">#</a></h5>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">dnf</span> <span class="pre">install</span> <span class="pre">gcc</span> <span class="pre">gcc-g++</span> <span class="pre">python3-wxpython4</span> <span class="pre">python3-numpy</span> <span class="pre">python3-scipy</span> <span class="pre">python3-matplotlib</span> <span class="pre">python3-scikit-image</span> <span class="pre">python3-nibabel</span> <span class="pre">python3-pyserial</span> <span class="pre">python3-psutil</span> <span class="pre">python3-vtk</span> <span class="pre">python3-gdcm</span> <span class="pre">python3-Cython</span> <span class="pre">python3-h5py</span> <span class="pre">python3-pypubsub</span></code></p>
+<p>Unfortunately, Fedora doesn’t have <strong>python3-imageio</strong> package. But it’s possible to install it using <strong>pip</strong>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">imageio</span></code></p>
+<p>Fedora don’t have PlaidML in their repositories, so install it using <strong>pip</strong>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">plaidml-keras</span></code></p>
+</section>
+<section id="arch-linux">
+<h5>Arch Linux<a class="headerlink" href="#arch-linux" title="Permalink to this heading">#</a></h5>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">pacman</span> <span class="pre">-S</span> <span class="pre">cython</span> <span class="pre">python-pip</span> <span class="pre">python-numpy</span> <span class="pre">python-scipy</span> <span class="pre">python-scikit-learn</span> <span class="pre">python-wxpython</span> <span class="pre">python-pyserial</span> <span class="pre">python-psutil</span> <span class="pre">python-h5py</span> <span class="pre">python-pypubsub</span> <span class="pre">python-mpi4py</span> <span class="pre">python-matplotlib</span> <span class="pre">vtk</span> <span class="pre">clinfo</span> <span class="pre">opencl-headers</span> <span class="pre">gdal</span> <span class="pre">glew</span> <span class="pre">hdf5</span> <span class="pre">jsoncpp</span> <span class="pre">netcdf</span> <span class="pre">pdal</span> <span class="pre">pugixml</span> <span class="pre">proj</span></code></p>
+<p>You have to install some packages from AUR, I’m using Pikaur to install them:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pikaur</span> <span class="pre">-S</span> <span class="pre">--noconfirm</span> <span class="pre">gdcm</span> <span class="pre">python-nibabel</span> <span class="pre">python-scikit-image</span> <span class="pre">python-imageio</span> <span class="pre">python-plaidml</span> <span class="pre">python-plaidml-keras</span></code></p>
+</section>
+</section>
+<section id="building-the-cython-modules">
+<h4>Building the Cython Modules<a class="headerlink" href="#building-the-cython-modules" title="Permalink to this heading">#</a></h4>
+<p>Enter on invesalius3 folder and execute: <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">setup.py</span> <span class="pre">build_ext</span> <span class="pre">--inplace</span></code></p>
+</section>
+<section id="id5">
+<h4>Running InVesalius<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<p>To run InVesalius, enter the InVesalius folder and run the command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">app.py</span></code></p>
+<p>You can pass a DICOM folder as parameter to make InVesalius starts with the DICOM loaded.</p>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">app.py</span> <span class="pre">-i</span> <span class="pre">/dicom/folder</span></code></p>
+<p>It’s possible to make InVesalius load a DICOM folder,
+create a surface (mesh) with the given threshold and export the surface to an STL file without loading any GUI:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">app.py</span> <span class="pre">--no-gui</span> <span class="pre">-i</span> <span class="pre">/media/thiago/Documentos/dcm/0051</span> <span class="pre">-t</span> <span class="pre">200,3033</span> <span class="pre">-e</span> <span class="pre">/tmp/0051.stl</span></code></p>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../abstract/abstract.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">About InVesalius</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../user_guide/user_guide.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">User Manual</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-installation">Python Installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-system-installation">Python System Installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#anaconda-installation">Anaconda Installation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-invesalius">Compiling InVesalius</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-invesalius">Running InVesalius</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Prerequisites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Compiling InVesalius</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Running Invesalius</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packages-debian-and-ubuntu">Packages Debian and Ubuntu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-distros">Other Distros</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-dependencies">Installing Dependencies</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pip-packages-recommended">Using PIP Packages (recommended)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#using-system-packages">Using System Packages</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#debian-and-ubuntu-tested-in-ubuntu-20-04">Debian and Ubuntu (Tested in Ubuntu 20.04)</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#fedora-tested-in-fedora-32">Fedora (Tested in Fedora 32)</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#arch-linux">Arch Linux</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-cython-modules">Building the Cython Modules</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Running InVesalius</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/installation_guide/installation_guide.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, InVesalius.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
