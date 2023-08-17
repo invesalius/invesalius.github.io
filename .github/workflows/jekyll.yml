@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx pydata_sphinx_theme myst-parser sphinx-design
+          pip install -r edit_documentation_here/requirements.txt
       - name: Sphinx build
         run: |
           sphinx-build -b html edit_documentation_here/source docs
