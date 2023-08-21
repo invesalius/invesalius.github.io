@@ -40,6 +40,18 @@ img {
     transform: scale(1);
     transition: 400ms ease-out;
 }
+
+.sd-row{
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+@media screen and (min-width:480px){
+    .sd-row{
+        flex-direction: row !important;
+    }
+}
+
 :root {
     --sd-color-primary: #fff;
     --sd-color-secondary: #6c757d;
