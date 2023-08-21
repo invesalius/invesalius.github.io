@@ -152,7 +152,7 @@ systems:
 
 -   GNU/Linux (Ubuntu, Mandriva, Fedora)
 
--   Apple Mac OS X
+-   Apple macOS
 
 The performance of InVesalius depends mainly on the number of
 reconstructed slices (images offered by the software), the amount of
