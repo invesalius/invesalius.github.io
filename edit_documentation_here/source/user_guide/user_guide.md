@@ -154,6 +154,7 @@ systems:
 
 -   Apple macOS
 
+However, Windows offers the most stable performance and the easiest setup.  
 The performance of InVesalius depends mainly on the number of
 reconstructed slices (images offered by the software), the amount of
 random access memory (RAM) available, the processor clock rate &
@@ -166,7 +167,7 @@ memory, it can open about 300 slices with a resolution of 512x512
 pixels. With 4 GB of memory, around 1000 images can be opened
 simultaneously at the same resolution.
 
-#### Minimum Settings
+#### Minimum Computer Settings
 
 -   32-bit Operating System
 
@@ -180,17 +181,17 @@ simultaneously at the same resolution.
 
 -   Video resolution of 1024x768 pixels
 
-#### Recommended Settings
+#### Recommended Computer Settings
 
 -   64-bit Operating System
 
--   Intel Core 2 Duo processor or equivalent 2.5 GHz processor
+-   Intel i7 or equivalent processor
 
--   8 GB of RAM
+-   16 GB of RAM
 
 -   20 GB available hard disk space
 
--   NVidia or ATI graphics card with 128 MB of memory
+-   Geforce or AMD or Quadro (P2000 equivalent or superior) graphics card
 
 -   Video resolution of 1920x1080 pixels
 
@@ -200,40 +201,42 @@ The recommended hardware components for navigated TMS users are listed below.
 
 InVesalius supports multiple different tracking devices, but 
 using NDI cameras (either Vega or Lyra) is recommended.
-To read more about which tracking a device to choose,
+To read more about which tracking device to choose,
 please check the [tracking devices wiki page](https://github.com/invesalius/invesalius3/wiki/Which-tracking-device-to-choose).
+In addition to the components below, [TMS accessories made by Brainbox](https://www.brainbox.shop/categories/brainsight-accs/1938652000002129022)
+are also compatible with InVesalius.
 
-**The recommended components**
 
-| The device       | Part                                                                 | Quantity | Driver                                                    |
-|------------------|----------------------------------------------------------------------|----------|-----------------------------------------------------------|
-| Pedal            | TBD                                                                  | 1        |                                                           |
-| NDI Polaris Vega | Polaris Vega ST Position Sensor                                      | 1        | Provided by NDI                                           |
-|                  | Polaris Vega PoE Midspan Power Supply 55 VDC 36W, 802.3 at compliant | 1        |                                                           |
-|                  | Cable Assy - Ethernet 3.0 CAT 6 RJ45 to RJ45 double shielded         | 1        |                                                           |
-|                  | Polaris Vega Tool Kit, Passive                                       | 1        |                                                           |
-|                  | Camera stand, TBD                                                    | 1        |                                                           |
-| Trigger cables   | BNCT shape adapter                                                   | 2        |                                                           |
-|                  | Trigger cable (USB) - USB to TTL -PL2303HX                           | 1        | PL-2303HX-Edition (Rev D) USB to Serial Bridge Controller |
-|                  | BNC to squared pins                                                  | 2        |                                                           |
-|                  | Jumper wires, 100 mm long or smaller                                 | 4        |                                                           |
+| **Part**                             | **Requirements**                                                                                                                                                                                                                                                              | **Information**                                                                                                                                                 |
+|--------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TMS – Neuronavigation Trigger Cables | [BNCT shape adapter](https://www.amazon.de/-/en/Shape-Double-Female-Coaxial-Adapter/dp/B00L9X74WO/ref=sr_1_6?crid=2PJP0S4XSRNUW&amp;keywords=bnc+splitter+cable&amp;qid=1688046287&amp;sprefix=bnc+splitter+cable%2Caps%2C275&amp;sr=8-6)                                     | The trigger from TMS is connected to BNC adapter, which connects to BNC to squared pins, which connect to jumper wires, which connect to the USB trigger cable. |
+|                                      | [2 x BNC to squared pins](https://fi.farnell.com/hirschmann-testmeasurement/933844001/test-lead-1-2m-60v/dp/4017468?st=bnc%20pin)                                                                                                                                             |                                                                                                                                                                 |
+|                                      | [Trigger cable (USB) - USB to TTL -PL2303HX](https://www.amazon.de/-/en/Candeon-PL2303HX-Upgrade-Converter-Download/dp/B08XXXXZRZ/ref=sr_1_19?crid=12YYDRV8BDPR8&amp;keywords=USB+TTL+cable&amp;qid=1688045214&amp;sprefix=usb+ttl+c%2Caps%2C313&amp;sr=8-19)                 |                                                                                                                                                                 |
+|                                      | [4 x Jumper wires, 100 mm long or shorter](https://www.amazon.de/-/en/Bestlus-Breadboard-Exclusive-Bridges-Raspberry/dp/B09H2TRZHB/ref=sr_1_2?crid=2DOXQMSMQTFAG&amp;keywords=arduino+cables+100mm&amp;qid=1688048428&amp;sprefix=arduino+cables+100mm%2Caps%2C271&amp;sr=8-2) |                                                                                                                                                                 |
+| Tracking camera                      | [Polaris Vega ST Position Sensor, EPV, PL, CFR008](https://www.ndigital.com/optical-measurement-technology/polaris-vega/)                                                                                                                                                     |                                                                                                                                                                 |
+|                                      | Polaris Vega PoE Midspan Power Supply 55 VDC 36W, 802.3 at compliant                                                                                                                                                                                                          |                                                                                                                                                                 |
+|                                      | Cable Assy - Ethernet 3.0 CAT 6 RJ45 to RJ45 double shielded                                                                                                                                                                                                                  |                                                                                                                                                                 |
+|                                      | Polaris Vega Tool Kit, Passive                                                                                                                                                                                                                                                |                                                                                                                                                                 |
+|                                      | Camera stand                                                                                                                                                                                                                                                                  | The stand should offer possibility to move the camera around. Can be mounted in the wall, or a ceiling, or on a movable stand.                                  |
+| Probe                                | 3D models provided by Renan or Aalto,                                                                                                                                                                                                                                         | ROM file required.                                                                                                                                              |
+|                                      | OR the NDI toolkit probe,                                                                                                                                                                                                                                                     |                                                                                                                                                                 |
+|                                      | OR one existing from another navigations software.                                                                                                                                                                                                                            |                                                                                                                                                                 |
+| Coil marker                          | Marker for the coils with attachment (a 3D model provided by Renan),                                                                                                                                                                                                          |                                                                                                                                                                 |
+|                                      | OR a clip mount designed by Renan.                                                                                                                                                                                                                                            |                                                                                                                                                                 |
+| Head marker                          | Head marker (a 3D model provided by Ana or Renan),                                                                                                                                                                                                                            | Attach the marker using a headband or using the clip to an EPI safety glasses: Example here.                                                                    |
+|                                      | OR a Polaris Tool Kit marker.                                                                                                                                                                                                                                                 |                                                                                                                                                                 |
+| Pedal                                | [Bewinner USB Triple Foot Pedal](https://www.amazon.de/-/en/gp/product/B09ZR7FV3R/ref=ox_sc_act_title_3?smid=A2KREUBK79VF64&th=1)                                                                                                                                             |                                                                                                                                                                 |
+|                                      | [USB Extension cable 3 m](https://www.amazon.de/-/en/gp/product/B09GVGFBG5/ref=ox_sc_act_title_2?smid=A3QP6MATKOCSJT&th=1)                                                                                                                                                    |                                                                                                                                                                 |
+|                                      | [4-Port USB 3.0 Hub](https://www.amazon.de/-/en/3-0-Hub-MacBook-Windows-Ultrabooks-Compatible/dp/B00Y211AFM/ref=sr_1_6?crid=1YDVTJXIW4HZI&keywords=usb+hub&qid=1692631216&refinements=p_72%3A419117031&rnid=419116031&sprefix=usb+hu%2Caps%2C195&sr=8-6)                      |                                                                                                                                                                 |
 
-**Links to buy the components**
 
-| Part                                       | Where to buy                                                                                                                                                                                                                      |
-|--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Polaris Vega ST Position Sensor            | [Northern Digital Inc](https://www.ndigital.com/optical-measurement-technology/polaris-vega/)                                                                                                                                     |
-| BNCT shape adapter                         | [Amazon (DE)](https://www.amazon.de/-/en/Shape-Double-Female-Coaxial-Adapter/dp/B00L9X74WO/ref=sr_1_6?crid=2PJP0S4XSRNUW&keywords=bnc+splitter+cable&qid=1688046287&sprefix=bnc+splitter+cable%2Caps%2C275&sr=8-6)                |
-| Trigger cable (USB) - USB to TTL -PL2303HX | [Amazon (DE)](https://www.amazon.de/-/en/Candeon-PL2303HX-Upgrade-Converter-Download/dp/B08XXXXZRZ/ref=sr_1_19?crid=12YYDRV8BDPR8&keywords=USB+TTL+cable&qid=1688045214&sprefix=usb+ttl+c%2Caps%2C313&sr=8-19)                    |
-| BNC to squared pins                        | [Farnell Oy](https://fi.farnell.com/hirschmann-testmeasurement/933844001/test-lead-1-2m-60v/dp/4017468?st=bnc%20pin)                                                                                                              |
-| Jumper wires, 100 mm long or smaller       | [Amazon (DE)](https://www.amazon.de/-/en/Bestlus-Breadboard-Exclusive-Bridges-Raspberry/dp/B09H2TRZHB/ref=sr_1_2?crid=2DOXQMSMQTFAG&keywords=arduino+cables+100mm&qid=1688048428&sprefix=arduino+cables+100mm%2Caps%2C271&sr=8-2) |
 
 ## Installation
 
 To download InVesalius, visit one of the following sites:
 
-* [Gov.br](https://www.cti.gov.br/invesalius)  
-* [InVesalius GitHub](http://invesalius.github.io)
+* [InVesalius GitHub](http://invesalius.github.io),
+* [Gov.br](https://www.cti.gov.br/invesalius).
 
 ### MS-Windows
 
