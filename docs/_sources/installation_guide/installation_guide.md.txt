@@ -24,7 +24,9 @@ In both cases, the following prerequisites apply:
 
 ### Python Installation
 
-#### Python System Installation
+Install the InVesalius either with Python system OR Anaconda.
+
+#### Option 1: Python System Installation
 
 1. Download and install Python 3.8 from the [Python website](https://www.python.org/downloads/).
 
@@ -50,7 +52,7 @@ The following command downloads and install the pre-generated wheel for Python 3
 pip install https://github.com/dmritrekker/trekker/raw/master/binaries/Trekker-0.9-cp38-cp38-win_amd64.whl
 ```
 
-#### Anaconda Installation
+#### Option 2: Anaconda Installation
 
 1. Install [Anaconda](https://www.anaconda.com/products/individual), preferably the 64-bit version.
 
@@ -90,7 +92,7 @@ Inside InVesalius source code directory run:
 python app.py
 ```
 
-:warning: If using Anaconda, remember to always open the Anaconda Powershell and activate the 
+Warning: If using Anaconda, remember to always open the Anaconda Powershell and activate the 
 environment before running the above command.
 
 
