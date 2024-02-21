@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>About InVesalius &#8212; InVesalius3 2023-07-03 documentation</title>
+    <title>Contributor Guide &#8212; InVesalius3 2023-07-03 documentation</title>
   
   
   
@@ -41,11 +41,10 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'abstract/abstract';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contributor_guide/contributor';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installation" href="../installation_guide/installation_guide.html" />
-    <link rel="prev" title="InVesalius documentation" href="../index.html" />
+    <link rel="prev" title="User Manual" href="../user_guide/user_guide.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -138,8 +137,8 @@
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../abstract/abstract.html">
                         About
                       </a>
                     </li>
@@ -159,8 +158,8 @@
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../contributor_guide/contributor.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
                         Contributor Guide
                       </a>
                     </li>
@@ -263,8 +262,8 @@ document.write(`
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../abstract/abstract.html">
                         About
                       </a>
                     </li>
@@ -284,8 +283,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../contributor_guide/contributor.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
                         Contributor Guide
                       </a>
                     </li>
@@ -372,7 +371,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">About InVesalius</li>
+    <li class="breadcrumb-item active" aria-current="page">Contributor Guide</li>
   </ul>
 </nav>
 </div>
@@ -389,35 +388,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="about-invesalius">
-<h1>About InVesalius<a class="headerlink" href="#about-invesalius" title="Permalink to this heading">#</a></h1>
-<p>InVesalius is a public health software designed for the analysis
-and segmentation of virtual anatomical models.
-This software enables the generation of physical models through
-rapid prototyping (3D printing) using two-dimensional (2D)
-images acquired from Computed Tomography (CT) or Magnetic Resonance Imaging (MRI).
-By converting these 2D images into three-dimensional (3D) anatomical representations,
-healthcare professionals can utilize the resulting models for various medical purposes.
-It is important to emphasize that the software is a supplementary diagnostic tool,
-and each and every act committed is the responsibility of health professionals.</p>
-<p>InVesalius is named in honour of the Belgian doctor Andreas Vesalius
-(1514-1564), widely considered the father of modern anatomy. InVesalius
-software has been developed by CTI (Center for Information Technology Center
-Renato Archer), a unit of the Brazilian Ministry of Science and
-Technology (MCT), since 2001. Initially, only the installation program
-was distributed as freeware. In November 2007 InVesalius was made fully
-available as free open source software via the Public Software
-Portal, allowing for communities of users and developers to connect.
-InVesalius stands out as a user-friendly cross-platform solution that
-effectively combines visualization technology with 3D analysis and rapid
-prototyping to aid surgeons in diagnosing and planning complex procedures.</p>
-<p>InVesalius has demonstrated great versatility across
-different fields, including medicine, dentistry, veterinary medicine,
-archeology and engineering.
-Its core functionality relies on processing DICOM-format medical images,
-predominantly from CT scanners and MRI machines.
-The software’s capability to enhance understanding and visualization of medical
-images contributes to improved procedural comprehension and decision-making.</p>
+  <section id="contributor-guide">
+<h1>Contributor Guide<a class="headerlink" href="#contributor-guide" title="Permalink to this heading">#</a></h1>
+<br/>
+<p>There are several ways to contribute to InVesalius, but we highlight two: contributing with source code and/or translating the software into other languages.</p>
+<section id="contributing-to-code">
+<h2>Contributing to code<a class="headerlink" href="#contributing-to-code" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Fork <a class="reference external" href="https://github.com/invesalius/invesalius3">InVesalius</a> at GitHub (https://help.github.com/articles/fork-a-repo).</p></li>
+<li><p>Create a branch for the desired feature you are going to develop, since we work with branches.</p></li>
+<li><p>Pull Request (https://help.github.com/articles/using-pull-requests).</p></li>
+</ol>
+<p>Please, write source code comments and commit messages in English. And follow the <a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">PEP 8 coding style</a>.</p>
+<p>See in <a class="reference external" href="https://invesalius.github.io/docs/installation_guide/installation_guide.html">this link the instructions</a> to install InVesalius and its dependencies.</p>
+</section>
+<section id="contributing-to-translation">
+<h2>Contributing to translation<a class="headerlink" href="#contributing-to-translation" title="Permalink to this heading">#</a></h2>
+<p>InVesalius is under constant development, which makes it a challenge for translation into multiple languages.</p>
+<p>You can help us both: improving existing translations, or translating InVesalius to new languages. We are currently using <a class="reference external" href="https://www.transifex.com/">Transifex</a>, an open web service that help the translator’s job.</p>
+<p>Using Transifex to translate InVesalius</p>
+<ol class="arabic simple">
+<li><p>Register for a <a class="reference external" href="https://www.transifex.com/signup">Transifex account</a>.</p></li>
+<li><p>See your e-mail inbox and validate your account.</p></li>
+<li><p>Access <a class="reference external" href="https://www.transifex.com/projects/p/invesalius3/">InVesalius translation website</a>.</p></li>
+<li><p><strong>Request language</strong> if the language you will translate is not on the available translations. Or Select one of available translations, click the link <strong>gui - po/en.po</strong> then click the button <strong>Translate now</strong>.</p></li>
+<li><p>Wait for the translation permission.</p></li>
+<li><p>Do not forget to press save while you translate – and after you have finished.</p></li>
+</ol>
+</section>
 </section>
 
 
@@ -431,22 +429,13 @@ images contributes to improved procedural comprehension and decision-making.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="../user_guide/user_guide.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">InVesalius documentation</p>
+        <p class="prev-next-title">User Manual</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../installation_guide/installation_guide.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installation</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -459,9 +448,22 @@ images contributes to improved procedural comprehension and decision-making.</p>
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-to-code">Contributing to code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributing-to-translation">Contributing to translation</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/abstract/abstract.md.txt">
+    <a href="../_sources/contributor_guide/contributor.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
