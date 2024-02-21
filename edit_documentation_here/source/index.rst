@@ -16,6 +16,7 @@ InVesalius documentation
    About <abstract/abstract.md>
    Developer Installation <installation_guide/installation_guide.md>
    User Manual <user_guide/user_guide.md>
+   Contributor Guide <contributor_guide/contributor.md>
 
 .. grid::
 
@@ -40,6 +41,8 @@ InVesalius documentation
       Find more about installing the developer version
       of the software.
 
+.. grid::
+
    .. grid-item-card:: User manual
       :link: user_guide/user_guide.html
       :text-align: left
@@ -50,6 +53,17 @@ InVesalius documentation
 
       Find more about the installation process and
       using the software.
+
+   .. grid-item-card:: Contributor guide 
+      :link: contributor_guide/contributor.html
+      :text-align: left
+      :img-background: _static/images/invesalius_card_3.jpg
+      :class-title: sd-fs-5
+      :class-card: sd-animate-slide-from-left rounded-3
+      :class-body: custom
+
+      Find how you can contribute to InVesalius.
+
 
 .. Indices and tables
 .. ==================
