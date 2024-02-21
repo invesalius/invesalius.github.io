@@ -44,6 +44,7 @@ html_theme_options = {
             "icon": "fa-brands fa-github-square",
             # Whether icon should be a FontAwesome class, or a local file
             "type": "fontawesome",  # Default is fontawesome
+            "navigation_depth": 2,
         }
    ]
    
