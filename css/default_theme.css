@@ -1,0 +1,21 @@
+body {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  a {
+    color: #007bff;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #333;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Other styles go here... */
+  

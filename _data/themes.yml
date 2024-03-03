@@ -1,0 +1,6 @@
+- name: "Default"
+  url: "/css/default_theme.css"
+- name: "Dark"
+  url: "/css/dark_theme.css"
+- name: "Light"
+  url: "/css/light_theme.css"
