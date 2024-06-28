@@ -28,7 +28,7 @@ Install the InVesalius either with Python system OR Anaconda.
 
 #### Option 1: Python System Installation
 
-1. Download and install Python 3.8 from the [Python website](https://www.python.org/downloads/).
+1. Download and install Python 3.11 from the [Python website](https://www.python.org/downloads/).
 
 2. Install InVesalius main dependencies (**WXPython**, **numpy**, **scipy**, **scikit-image**,
 **ImageIO**, **H5Py**, **Pillow**, **Pyserial**, **PSUtil**, **nibabel**, **configparser**, 
