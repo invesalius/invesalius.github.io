@@ -125,23 +125,6 @@ www.gehealthcare.com
 
 Coil - www.healthcare.philips.com
 ```
-
-#### Introduction to Neuronavigation 
-
-Neuronavigation is a technique that allows tracking and localization of
-surgical instruments relative to neuronal structures through computer
-visualization. In addition, neuronavigation systems are a fundamental tool
-to aid surgical plan and to increase the accuracy of experiments in
-neuroscience, such as transcranial magnetic stimulation (TMS),
-electroencephalography (EEG), magnetoencephalography (MEG) and
-near-infrared spectroscopy (NIRS). Despite the vast field of
-applications, the use of neuronavigation in research centers is limited
-by its high cost. InVesalius Navigator offers users a low-cost,
-open-source alternative to commercial neuronavigation systems. In this
-sense, it is possible to use specific tools for neuronavigation and
-still have the possibility of developing features on demand. The
-software for neuronavigation is distributed in an executable version compatible with Windows 7, 8 and 10 operating system. 
-
 ### Software and Hardware Requirements
 
 InVesalius is designed to run on personal computers, such as desktops
@@ -3272,7 +3255,7 @@ Shorcut to show or hide
 texts.
 ```
 
-{numref}`text_on` and {numref}`text_off` show text enabled and disabled, respectively.
+{numref}`text_on` and {numref}`text_off` show text enabled and disabled, respectively. Also {numref}`background_color`.
 
 
 ```{figure} images/invesalius_screen/axial_en.png
@@ -3289,4 +3272,518 @@ enabled.
 
 Show texts
 disabled.
+```
+
+## Neuronavigation
+
+Neuronavigation is a technique that allows tracking and localization of
+surgical instruments relative to neuronal structures through computer
+visualization. In addition, neuronavigation systems are a fundamental tool
+to aid surgical plan and to increase the accuracy of experiments in
+neuroscience, such as transcranial magnetic stimulation (TMS),
+electroencephalography (EEG), magnetoencephalography (MEG) and
+near-infrared spectroscopy (NIRS). Despite the vast field of
+applications, the use of neuronavigation in research centers is limited
+by its high cost. InVesalius Navigator offers users a low-cost,
+open-source alternative to commercial neuronavigation systems. In this
+sense, it is possible to use specific tools for neuronavigation and
+still have the possibility of developing features on demand. The
+software for neuronavigation is distributed in an executable version compatible with Windows 7, 8 and 10 operating system. 
+
+The following sections explain different steps of neuronavigation such as setting up the tracker, creating and editing markers, 
+brain segmentation and creating 3D surface of the head.
+
+### Setting up the tracking device
+
+**1.** Open Preferences ({numref}`preferences`).
+
+```{figure} images/invesalius_screen/preferences.png
+:name: preferences
+:align: center
+
+Preferences
+```
+
+**2.** Go to the tracker tab and choose the tracking device from the dropdown menu as seen in {numref}`select_tracker`.
+
+```{figure} images/invesalius_screen/select_tracker_optitrack.png
+:name: select_tracker
+:align: center
+
+Tracker selection
+```
+#### Optitrack
+
+When using Optitrack, select the Motive calibration file and user profile file for that tracker ({numref}`configure_optitrack`) 
+and click **OK** and **OK** again.
+
+```{figure} images/invesalius_screen/configure_optitrack.png
+:name: configure_optitrack
+:align: center
+
+Configure Optitrack
+```
+
+#### Polaris
+
+Configuring Polaris requires choosing the COM port or IP, and ROM files ({numref}`configure_polaris`)
+
+**COM port or IP**: Choose the connection to the camera. Typical COM ports are:
+- Windows: COM1
+- Linux: /dev/ttyUSB0
+- Mac: /dev/tty.usbserial-001014FA
+
+**ROM files**: Each passive marker tool has its own ROM file that defines its geometry for Polaris. 
+    For example, if you are using the Magstim NT-115 as the probe, select NT-115.rom as Probe ROM file. 
+
+```{figure} images/invesalius_screen/configure_polaris.png
+:name: configure_polaris
+:align: center
+
+Configure Polaris
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/connecting_to_cameras.mp4", width="640" height="360"/>
+```
+
+### Stimulator configuration
+
+**1.** Open Preferences ({numref}`preferences2`) and go to the stimulator tab.
+
+```{figure} images/invesalius_screen/preferences.png
+:name: preferences2
+:align: center
+
+Preferences
+```
+
+**2.** You can create a new stimulator registration or load an existing registration 
+from OBR file as seen in {numref}`stimulator_config`.
+
+```{figure} images/invesalius_screen/stimulator_configuration.png
+:name: stimulator_config
+:align: center
+
+Loading stimulator registration from a file
+```
+
+**3.** Here you can also change the angle threshold, distance threshold, 
+and timestamp interval of the stimulator ({numref}`preferences_stimulator`)
+
+```{figure} images/invesalius_screen/preferences_stimulator.png
+:name: preferences_stimulator
+:align: center
+
+Stimulator configuration
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/stimulator_configuration.mp4", width="640" height="360"/>
+```
+
+### Creating head surface
+
+**1.** Go to **Imports section** → **1. Load data** and select either **Import DICOM images** or **Import NIFTI images** 
+and select the file to load ({numref}`import_nifti`). For MRI images NIFTI is the preferred file type 
+because it enables automatic brightness adjustment.
+
+```{figure} images/invesalius_screen/import_nifti_image.png
+:name: import_nifti
+:align: center
+
+Import NIFTI image
+```
+
+**2.** Go to **Imports section** → **2. Select region of interest** and set the minimum and maximum threshold 
+by moving the two sliders on the bar. The threshold should be set so that only the head is colored 
+in the slice windows as seen in {numref}`correct_threshold` below.
+
+```{figure} images/invesalius_screen/correct_threshold.png
+:name: correct_threshold
+:align: center
+
+Correctly set threshold
+```
+
+{numref}`incorrect_threshold` shows an example of **incorrectly** set threshold for the mask. 
+There should not be any dots visible outside of the head in the mask. 
+
+```{figure} images/invesalius_screen/incorrect_threshold.png
+:name: incorrect_threshold
+:align: center
+
+Incorrectly set threshold
+```
+
+**3.** Once the mask threshold is set, click **Create surface** button 
+to create a 3D surface of the head ({numref}`head_with_artefacts`).
+
+```{figure} images/invesalius_screen/3d_head_with_artefacts.png
+:name: head_with_artefacts
+:align: center
+
+3D surface of the head
+```
+
+**4.** Go to the **Imports section** → **3. Configure 3D surface** → **Advanced options** and click **Select largest surface** 
+to remove small disconnected parts of the surface. The disconnected parts can be clearly seen in the 3D view in the previous image. 
+This process creates a new surface in the **Data** section, where the disconnected parts have been removed as seen in {numref}`head_without_artefacts`.
+
+```{figure} images/invesalius_screen/3d_head_without_artefacts.png
+:name: head_without_artefacts
+:align: center
+
+Cleaned up 3D surface of the head
+```
+
+**5.** To refine the surface further, select **Plugins** → **Remove non-visible faces** ({numref}`non_visible_faces`). 
+Removing non-visible faces is also required to perform the “Refine” step at the end of coregistration. 
+
+```{figure} images/invesalius_screen/remove_non_visible_faces.png
+:name: non_visible_faces
+:align: center
+
+Remove non-visible faces
+```
+
+**6.** From the dropdown menu select the desired surface ({numref}`non_visible_faces_surface`), which in this case is usually the newest surface, 
+and click **Apply**. This also creates a new surface in the **Data** section.
+
+```{figure} images/invesalius_screen/remove_non_visible_faces_surface.png
+:name: non_visible_faces_surface
+:align: center
+
+Select which surface to remove non-visible faces from
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/creating_head_surface.mp4", width="640" height="360"/>
+```
+
+### Renaming surfaces
+
+Go to the **Data** section at the bottom left corner, open the 3D surfaces tab, 
+and double click the name of the surface you want to change and type a new name ({numref}`rename_surface`).
+
+```{figure} images/invesalius_screen/rename_surface.png
+:name: rename_surface
+:align: center
+
+Rename surface
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/naming_surfaces.mp4", width="640" height="360"/>
+```
+
+### Recoloring surfaces
+
+**1.** Go to **Imports section** → **3. Configure 3D surface** → **Surface properties**
+
+**2.** Select the surface from the dropdown menu and click the colored square 
+next to it to change the color as shown in {numref}`recolor_surface`. 
+You can also change the transparency of the surface with the transparency slider.
+
+```{figure} images/invesalius_screen/recolor_surface.png
+:name: recolor_surface
+:align: center
+
+Recolor surface
+```
+
+It is also possible to edit the color right-clicking the surface in the **Data** → **3D surfaces** 
+and selecting **Change color** ({numref}`recolor_surface_menu`).
+
+```{figure} images/invesalius_screen/recolor_surface_context_menu.png
+:name: recolor_surface_menu
+:align: center
+
+Recolor surface via context menu
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/coloring_surfaces.mp4", width="640" height="360"/>
+```
+
+### Brain segmentation
+
+**1.** Go to **Tools** → **Segmentation** → **Brain segmentation MRI T1** ({numref}`brain_segmentation`)
+
+```{figure} images/invesalius_screen/brain_segmentation.png
+:name: brain_segmentation
+:align: center
+
+Brain segmentation
+```
+
+**2.** Select the backend and device, use Pytorch backend when using the CPU, 
+and click **Segment** ({numref}`brain_segmentation_backend`). Depending on the computer, this can take several minutes.
+
+```{figure} images/invesalius_screen/brain_segmentation_backend.png
+:name: brain_segmentation_backend
+:align: center
+
+Brain segmentation configuration
+```
+
+**3.** After segmentation, go to **Imports section** → **2. Select region of interest** 
+and click **Create surface** ({numref}`create_brain_surface`).
+
+```{figure} images/invesalius_screen/create_surface.png
+:name: create_brain_surface
+:align: center
+
+Create a brain surface
+```
+
+**4.** As seen in {numref}`brain_surface`, this creates a 3D surface of the brain, 
+which visibility and color can be changed in the **Data** section on the **3D surfaces** tab.
+
+```{figure} images/invesalius_screen/surfaces.png
+:name: brain_surface
+:align: center
+
+Brain surface
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/brain_segmentation.mp4", width="640" height="360"/>
+```
+
+### Peeling the brain
+
+**1.** Once the brain has been segmented, it is possible to create a peel 
+by going to **Imports section** → **5. Tractography** and clicking **Peel** ({numref}`peeling_brain`).
+
+```{figure} images/invesalius_screen/peeling_the_brain.png
+:name: peeling_brain
+:align: center
+
+Peeling the brain
+```
+
+**2.** Select the brain segmentation mask and click **OK** ({numref}`create_peel`)). 
+You can also import a mask file from another program such as Freesurfer or FSL in NIfTI format.
+
+```{figure} images/invesalius_screen/create_peel.png
+:name: create_peel
+:align: center
+
+Create peel
+```
+
+**3.** The peeled brain will appear in the volume window and parameters 
+such as peeling depth can be edited in the tractography panel as seen in {numref}`peeled_brain`.
+
+```{figure} images/invesalius_screen/peeled_brain.png
+:name: peeled_brain
+:align: center
+
+Peeled brain
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/peeled_brain.mp4", width="640" height="360"/>
+```
+
+### Registering image fiducials
+
+**1.** Go to **Navigation section** → **Coregistration** → **Image**
+
+**2.** Click **Start registration** and place the cross tool in the slice windows on one of the three fiducials; 
+left ear, right ear, and nasion. Once the cross tool is on the fiducial point, 
+record that fiducial by clicking the corresponding fiducial button. 
+
+Keep in mind that the right ear is on the left side and the left ear on the right side in the slice windows 
+as indicated by the letters "R" and "L" which can be seen at the edges of each slice window in {numref}`image_fiducials`.
+
+```{figure} images/invesalius_screen/image_fiducials.png
+:name: image_fiducials
+:align: center
+
+Registering image fiducials
+```
+
+**3.** Repeat this process to register the rest of the image fiducials.
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/image_fiducials.mp4", width="640" height="360"/>
+```
+
+### Registering tracker fiducials
+
+**1.** Go to **Navigation section** → **Coregistration** → **Tracker**
+
+**2.** Make sure that the tracker is configured and show as current tracker 
+({numref}`tracker_fiducials`), and if not, click **Change tracker** to configure it.
+
+```{figure} images/invesalius_screen/register_tracker_fiducials.png
+:name: tracker_fiducials
+:align: center
+
+Tracker tab
+```
+
+**3.** The fiducials are color-coded; red indicates that the fiducial has not been recorded, 
+green indicates that the fiducial has been recorded, 
+and yellow indicates the currently selected fiducial that should be recorded next.
+
+**4.** Click **Start registration** and record the fiducial that is shown in yellow 
+by placing the tip of the marker probe to the fiducial point on the subject’s head, 
+and either clicking the **Record fiducial** button or pressing the pedal if it is connected ({numref}`record_tracker_fiducials`).
+
+```{figure} images/invesalius_screen/tracker_fiducials_color_coded.png
+:name: record_tracker_fiducials
+:align: center
+
+Recording tracker fiducials
+```
+
+**5.** Continue this process for the other two fiducials, always recording the fiducial highlighted in yellow next.
+
+**6.** Once all the fiducials have been recorded, make sure that you applied removed non-visible faces in **Plugins** → **Remove non-visible faces** 
+and then click **Next** to move to the Refine tab and if the fiducial registration error (FRE) is too high, click **Refine** ({numref}`refine_coregistration`).
+
+```{figure} images/invesalius_screen/refine_coregistration.png
+:name: refine_coregistration
+:align: center
+
+Refine coregistration
+```
+
+**7.** When refining the registration, register at least 5 additional points on the subject’s head
+ by placing the tip of the marker probe on the head and clicking Create point as shown in {numref}`refine_coregistration_ui`.
+
+```{figure} images/invesalius_screen/refine_coregistration_ui.png
+:name: refine_coregistration_ui
+:align: center
+
+Refine coregistration window
+```
+
+**8.** Once refining is done, click **Apply registration** and **Done**.
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/tracker_fiducials.mp4", width="640" height="360"/>
+```
+
+### Creating markers
+
+Go to **Navigation section** → **Navigation** and now you can use the cross tool ({numref}`cross_tool`)
+ to select a location where you would like to create a marker. 
+
+```{figure} images/invesalius_screen/cross_tool.png
+:name: cross_tool
+:align: center
+
+Cross tool
+```
+
+Then click the **Create marker** button and a new landmark-type marker is created at that location as shown in {numref}`create_marker`. 
+If you do not select a location using the cross tool, clicking **Create marker** will create 
+a new marker at the center of the stimulator coil by default. 
+
+```{figure} images/invesalius_screen/create_marker.png
+:name: create_marker
+:align: center
+
+Create marker
+```
+
+When the stimulator is used to give TMS pulses, if the USB-TTL cable is connected, each pulse creates a marker 
+at the center of the stimulator. In this case the type of the created markers is coil target, 
+which means they can be directly set as targets by right-clicking the marker and selecting **Set as target**.
+
+This is different from landmark-type markers, which must be first made into coil targets by right-clicking 
+the marker and selecting **Create coil target** and then the new coil target marker 
+can be directly set as target the same way as markers created from TMS pulses. 
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/creating_markers.mp4", width="640" height="360"/>
+```
+
+### Editing markers
+
+**1.** Go to **Navigation section** → **Navigation** and right click on a marker in the list to open a context menu 
+with options to edit the label and color of the marker, and depending on the marker type, 
+also create a coil or brain target, or set the marker as target ({numref}`editing_markers`).
+
+```{figure} images/invesalius_screen/editing_markers.png
+:name: editing_markers
+:align: center
+
+Editing markers
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/editing_markers.mp4", width="640" height="360"/>
+```
+
+### Robot target positioning
+
+Once the fiducials have been recorded, tracker and stimulator have been configured, and the robot is connected, 
+you can create targets and have the robot move the stimulator to the target. Go to **Navigation section** → **Navigation**, 
+set a marker as a target by right-clicking it and selecting set as target, and click **Start neuronavigation** and make sure the 
+"Track target with robot" button with the crane icon is enabled at the bottom left corner of the navigation buttons ({numref}`robot_targeting`). 
+This will automatically start moving the stimulator to the target.
+
+```{figure} images/invesalius_screen/robot_targeting.png
+:name: robot_targeting
+:align: center
+
+Robot target positioning
+```
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/robot_target_positioning.mp4", width="640" height="360"/>
+```
+
+### Manual target positioning
+
+**1.** For manual coil positioning, there is a target mode, which can be activated by going to **Navigation section** → **Navigation**, 
+setting a target and clicking the **Start neuronavigation** button, and clicking the **Target mode** button under the marker list ({numref}`manual_targeting`).
+
+```{figure} images/invesalius_screen/manual_target_positioning.png
+:name: manual_targeting
+:align: center
+
+Manual target positioning
+```
+
+**2.** In target mode in the volume viewer, there are three images of the coil representing the orientation of the coil regarding the yaw, pitch, and roll rotations. 
+There are also visible arrows that help guide the coil in correct orientation along those three axes. The goal is to move the coil and reduce the size of the arrows 
+until the arrows disappear and each of the three small coils turns green. This means that the orientation of the coil is correct along all 
+the corresponding axes. When adjusting the coil orientation, it is usually easier to focus on one axis at a time instead of all at once.
+
+The volume window also displays the distance from the center of the coil to the target to help get close to the target without accidentally hitting the subject's head.
+
+**Example video:**
+
+```{raw} html
+<video controls src="../_static/videos/manual_target_positioning.mp4", width="640" height="360"/>
 ```
