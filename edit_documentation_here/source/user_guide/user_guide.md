@@ -3255,7 +3255,7 @@ Shorcut to show or hide
 texts.
 ```
 
-{numref}`text_on` and {numref}`text_off` show text enabled and disabled, respectively. Also {numref}`background_color`.
+{numref}`text_on` and {numref}`text_off` show text enabled and disabled, respectively.
 
 
 ```{figure} images/invesalius_screen/axial_en.png
