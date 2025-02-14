@@ -134,17 +134,10 @@ Install InVesalius main dependencies **wxpython**, **numpy**, **scipy**, **VTK**
 **scikit-image**, **Pillow**, **Pyserial**, **PSUtil**, **nibabel**, **configparser**, **H5py**, **PyPubsub** 
 and **plaidml** using pip:
 
-1. If using Mac with Intel:
-
 ```shell
 pip3 install -r requirements.txt
 ```
 
-2. If using Mac with Apple Silicon:
-
-```
-pip3 install -r requirements_m1.txt
-```
 ### Compiling InVesalius
 
 If you are using Mac with Apple Silicon, you need to export some environment variable before the next step:
