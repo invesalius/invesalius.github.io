@@ -126,3 +126,114 @@ uv run app.py
 ```
 
 **Warning:** If using Anaconda, always open the Anaconda Powershell and activate the environment before running the command.
+
+## MacOS
+
+This guide is based on **High Sierra**.
+
+### Prerequisites
+
+The first step is the installation of **homebrew**.
+Access the homebrew site to know how to [install it](http://brew.sh/).
+
+We recommend installing Python 3 from brew, and also installing **OpenMP** (we use it):
+
+```sh
+brew install python3 libomp
+```
+
+If you are working with an Apple Silicon Mac, you also have to install `hdf5`:
+
+```sh
+brew install hdf5
+```
+
+Clone **InVesalius 3** using git:
+
+```sh
+git clone --recurse-submodules https://github.com/invesalius/invesalius3
+```
+
+### Installation
+
+To run the following commands, ensure your shell is inside the `InVesalius` folder:
+
+```sh
+cd invesalius3
+```
+
+#### Preferred Installation Method (Using `uv`)
+
+We have transitioned to using `uv` for dependency management and `scikit-build-core` with CMake for compiling Cython modules.
+
+1. Install `uv`:
+
+   ```sh
+   brew install uv
+   ```
+
+2. Sync dependencies:
+
+   ```sh
+   uv sync
+   ```
+
+3. Build and install InVesalius (including compiling Cython modules):
+
+   ```sh
+   uv pip install -e .
+   ```
+
+#### Alternative Installation Method (Legacy `pip` Workflow)
+
+Install dependencies using:
+
+```sh
+pip3 install -r requirements.txt
+```
+
+##### Compiling InVesalius (Legacy)
+
+If you are using a Mac with Apple Silicon, export the following environment variables before compiling:
+
+```sh
+export CFLAGS="-I/opt/homebrew/opt/libomp/include"
+export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
+export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
+```
+
+Compile the Cython packages used by InVesalius:
+
+```sh
+python3 setup.py build_ext --inplace
+```
+
+### Running InVesalius
+
+#### Preferred Method (Using `uv`)
+
+After installation, launch InVesalius with:
+
+```sh
+uv run app.py
+```
+
+#### Alternative Method (Using Python Directly)
+
+```sh
+python3 app.py
+```
+
+If you encounter the following error:
+
+```
+This program needs access to the screen. Please run with a
+Framework build of python, and only when you are logged in
+on the main display of your Mac.
+```
+
+Run InVesalius using:
+
+```sh
+pythonw app.py
+```
