@@ -23,9 +23,9 @@ In all cases, the following prerequisites apply:
   git clone --recurse-submodules https://github.com/invesalius/invesalius3
   ```
 
-## Installation Options
+### Installation Options
 
-### Option 1: Using `uv` (Recommended)
+#### Option 1: Using `uv` (Recommended)
 
 `uv` is a modern Python package manager that ensures better dependency management. Follow these steps:
 
@@ -53,13 +53,13 @@ In all cases, the following prerequisites apply:
    uv run app.py
    ```
 
-5. **Tip**: To install additional dependencies, use:
+**Tip**: To install additional dependencies, use:
 
-   ```shell
-   uv add <dependency-name>
-   ```
+```shell
+uv add <dependency-name>
+```
 
-### Option 2: Python System Installation
+#### Option 2: Python System Installation
 
 1. Download and install Python 3.8 from the [Python website](https://www.python.org/downloads/).
 
@@ -75,10 +75,10 @@ In all cases, the following prerequisites apply:
    .venv\bin\activate
    ```
 
-4. Install InVesalius main dependencies using pip:
+4. Install InVesalius main dependencies and compile cython extensions using pip:
 
    ```shell
-   pip install -r requirements.txt
+   pip install -e .
    ```
 
 5. If you are going to use the neuronavigation features, install the wrappers for tracking devices:
@@ -93,12 +93,7 @@ In all cases, the following prerequisites apply:
    pip install https://github.com/dmritrekker/trekker/raw/master/binaries/Trekker-0.9-cp38-cp38-win_amd64.whl
    ```
 
-7. Compile cython files:
-   ```shell
-   pip install .
-   ```
-
-### Option 3: Anaconda Installation
+#### Option 3: Anaconda Installation
 
 1. Install [Anaconda](https://www.anaconda.com/products/individual), preferably the 64-bit version.
 
@@ -115,20 +110,18 @@ In all cases, the following prerequisites apply:
    ```
 
 4. Activate the virtual environment:
+
    ```shell
    conda activate invesalius
    ```
 
-### Compiling InVesalius (For Python System & Anaconda Installations)
+5. Compiling InVesalius:
 
-Some algorithms of InVesalius are written in Cython for performance. These need to be compiled manually.
-Open the Visual Studio command prompt, navigate to the InVesalius directory, and compile:
+   Some algorithms of InVesalius are written in Cython for performance. These need to be compiled manually:
 
-```shell
-python setup.py build_ext --inplace
-```
-
-(Note: If using `uv`, this step is not required as `scikit-build-core` and `cmake` handle it automatically.)
+   ```shell
+   python setup.py build_ext --inplace
+   ```
 
 ### Running InVesalius
 
@@ -136,9 +129,10 @@ Inside the InVesalius source code directory, run:
 
 ```shell
 python app.py
+
 ```
 
-**Warning:** If using Anaconda or pip , always activate the environment before running the command.
+**Warning:** If using Anaconda or pip , always activate the environment using `.venv\bin\activate` before running the command.
 
 If using `uv`, simply run:
 
@@ -193,11 +187,13 @@ We have transitioned to using `uv` for dependency management and `scikit-build-c
 
 2. Sync dependencies:
 
+   a) First-time installation (or when compiling Cython extensions):
+
    ```sh
    OpenMP_ROOT=$(brew --prefix)/opt/libomp uv sync
    ```
 
-3. Build and install InVesalius (including compiling Cython modules):
+   b) For subsequent dependency synchronization (when Cython compilation is not needed):
 
    ```sh
    uv sync
@@ -374,13 +370,15 @@ sudo pacman -syu \
 
 It's recommended to create a virtualenv
 
-1.  using `uv`:
+1.  using `uv` (Preferred Method):
 
     ```bash
     # Go to InVesalius folder
     cd invesalius3
-    # Create my_env environment
+
+    # Create .venv environment
     uv venv
+
     # Install dependencies and build cython extensions
     uv sync
     ```
@@ -392,14 +390,19 @@ It's recommended to create a virtualenv
     ```
 
 2.  using `pip`:
+
     ```bash
     # Go to InVesalius folder
     cd invesalius3
+
     # Create my_env environment
-    python3 -m venv my_env
+    python3 -m venv .venv
+
     # Activate it every time you want to run InVesalius
     source my_env/bin/activate
-    pip install -r requirements.txt
+
+    #Install dependencies and build cython extensions
+    pip install -e .
     ```
 
 ##### Using System Packages
@@ -432,21 +435,39 @@ You have to install some packages from AUR, I'm using Pikaur to install them:
 
 `pikaur -S --noconfirm gdcm python-nibabel python-scikit-image python-imageio python-plaidml python-plaidml-keras`
 
-#### Building the Cython Modules
-
-Enter on invesalius3 folder and execute: `python3 setup.py build_ext --inplace`
-
 #### Running InVesalius
 
-To run InVesalius, enter the InVesalius folder and run the command:
+To run InVesalius, enter the InVesalius folder and use one of the following commands:
 
-`python3 app.py`
+If using `uv`, run this command:
 
-You can pass a DICOM folder as parameter to make InVesalius starts with the DICOM loaded.
+```sh
+uv run app.py
+```
+
+If using `pip`,run this command:
+
+```sh
+python3 app.py
+```
+
+You can pass a DICOM folder as a parameter to make InVesalius start with the DICOM loaded.
+
+Using `uv`:
+
+`uv run app.py -i /dicom/folder`
+
+Using Python:
 
 `python3 app.py -i /dicom/folder`
 
-It's possible to make InVesalius load a DICOM folder,
-create a surface (mesh) with the given threshold and export the surface to an STL file without loading any GUI:
+It's possible to make InVesalius load a DICOM folder,  
+create a surface (mesh) with the given threshold, and export the surface to an STL file without loading any GUI:
+
+Using `uv`:
+
+`uv run app.py --no-gui -i /media/thiago/Documentos/dcm/0051 -t 200,3033 -e /tmp/0051.stl`
+
+Using Python:
 
 `python3 app.py --no-gui -i /media/thiago/Documentos/dcm/0051 -t 200,3033 -e /tmp/0051.stl`
