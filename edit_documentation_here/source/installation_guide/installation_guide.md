@@ -32,7 +32,7 @@ In all cases, the following prerequisites apply:
 1. Install `uv` on Windows using:
 
    ```shell
-   scoop install main/uv
+   winget install --id=astral-sh.uv  -e
    ```
 
 2. Navigate to the cloned InVesalius directory:
@@ -44,7 +44,7 @@ In all cases, the following prerequisites apply:
 3. Install dependencies and compile Cython extensions automatically:
 
    ```shell
-   uv pip install -e .
+   uv sync
    ```
 
 4. Run InVesalius:
@@ -63,21 +63,39 @@ In all cases, the following prerequisites apply:
 
 1. Download and install Python 3.8 from the [Python website](https://www.python.org/downloads/).
 
-2. Install InVesalius main dependencies using pip:
+2. Create a virtual environment using
+
+   ```shell
+   python3 -m venv .venv
+   ```
+
+3. Activate the virtual environment using
+
+   ```shell
+   .venv\bin\activate
+   ```
+
+4. Install InVesalius main dependencies using pip:
 
    ```shell
    pip install -r requirements.txt
    ```
 
-3. If you are going to use the neuronavigation features, install the wrappers for tracking devices:
+5. If you are going to use the neuronavigation features, install the wrappers for tracking devices:
 
    ```shell
    pip install pyclaron polhemusFT polhemus pypolaris pypolarisP4
    ```
 
-4. **Optional:** To enable real-time tractography computation, install [Trekker](https://dmritrekker.github.io/):
+6. **Optional:** To enable real-time tractography computation, install [Trekker](https://dmritrekker.github.io/):
+
    ```shell
    pip install https://github.com/dmritrekker/trekker/raw/master/binaries/Trekker-0.9-cp38-cp38-win_amd64.whl
+   ```
+
+7. Compile cython files:
+   ```shell
+   pip install .
    ```
 
 ### Option 3: Anaconda Installation
@@ -120,13 +138,13 @@ Inside the InVesalius source code directory, run:
 python app.py
 ```
 
+**Warning:** If using Anaconda or pip , always activate the environment before running the command.
+
 If using `uv`, simply run:
 
 ```shell
 uv run app.py
 ```
-
-**Warning:** If using Anaconda, always open the Anaconda Powershell and activate the environment before running the command.
 
 ## MacOS
 
@@ -176,13 +194,13 @@ We have transitioned to using `uv` for dependency management and `scikit-build-c
 2. Sync dependencies:
 
    ```sh
-   uv sync
+   OpenMP_ROOT=$(brew --prefix)/opt/libomp uv sync
    ```
 
 3. Build and install InVesalius (including compiling Cython modules):
 
    ```sh
-   uv pip install -e .
+   uv sync
    ```
 
 #### Alternative Installation Method (Legacy `pip` Workflow)
@@ -289,8 +307,9 @@ flatpak run br.gov.cti.invesalius
 
 Use this command to get InVesalius source code from GitHub:
 
-bash
+```bash
 git clone --recurse-submodules https://github.com/invesalius/invesalius3
+```
 
 #### Installing Dependencies
 
@@ -300,118 +319,134 @@ First, you have to install some system packages to compile wxPython and H5py:
 
 - Fedora (tested on Fedora 34)
 
-bash
+```bash
 sudo dnf -y install \
- gcc-c++ \
- python3-devel \
- freeglut-devel \
- gstreamer1-devel \
- gstreamer1-plugins-base-devel \
- gtk3-devel \
- libjpeg-turbo-devel \
- libnotify-devel \
- libpng-devel \
- libSM-devel \
- libtiff-devel \
- libXtst-devel \
- SDL-devel \
- webkit2gtk3-devel \
- which \
- hdf5-devel
+    gcc-c++ \
+    python3-devel \
+    freeglut-devel \
+    gstreamer1-devel \
+    gstreamer1-plugins-base-devel \
+    gtk3-devel \
+    libjpeg-turbo-devel \
+    libnotify-devel \
+    libpng-devel \
+    libSM-devel \
+    libtiff-devel \
+    libXtst-devel \
+    SDL-devel \
+    webkit2gtk3-devel \
+    which \
+    hdf5-devel
+```
 
 - Ubuntu (tested on Ubuntu 20.10 and 21.04)
 
-bash
+```bash
 sudo apt install -y \
- freeglut3 \
- freeglut3-dev \
- libgl1-mesa-dev \
- libglu1-mesa-dev \
- libgstreamer-plugins-base1.0-dev \
- libgtk-3-dev \
- libjpeg-dev \
- libnotify-dev \
- libsdl2-dev \
- libsm-dev \
- libtiff-dev \
- libwebkit2gtk-4.0-dev \
- libxtst-dev \
- python3-dev \
- libhdf5-dev \
- build-essential \
- python3-venv
+    freeglut3 \
+    freeglut3-dev \
+    libgl1-mesa-dev \
+    libglu1-mesa-dev \
+    libgstreamer-plugins-base1.0-dev \
+    libgtk-3-dev \
+    libjpeg-dev \
+    libnotify-dev \
+    libsdl2-dev \
+    libsm-dev \
+    libtiff-dev \
+    libwebkit2gtk-4.0-dev \
+    libxtst-dev \
+    python3-dev \
+    libhdf5-dev \
+    build-essential \
+    python3-venv
+```
 
 - Arch
 
-bash
+```bash
 sudo pacman -syu \
- wxgtk3 \
- glu \
- mesa \
- webkit2gtk
+    wxgtk3 \
+    glu \
+    mesa \
+    webkit2gtk
+```
 
-It's recommended to create a virtualenv:
+It's recommended to create a virtualenv
 
-bash
+1.  using `uv`:
 
-# Go to InVesalius folder
+    ```bash
+    # Go to InVesalius folder
+    cd invesalius3
+    # Create my_env environment
+    uv venv
+    # Install dependencies and build cython extensions
+    uv sync
+    ```
 
-cd invesalius3
+    Tip: To add extra dependencies to the project use:
 
-# Create my_env environment
+    ```bash
+    uv add <dependency-name>
+    ```
 
-python3 -m venv my_env
-
-# Activate it every time you want to run InVesalius
-
-source my_env/bin/activate
-pip install -r requirements.txt
+2.  using `pip`:
+    ```bash
+    # Go to InVesalius folder
+    cd invesalius3
+    # Create my_env environment
+    python3 -m venv my_env
+    # Activate it every time you want to run InVesalius
+    source my_env/bin/activate
+    pip install -r requirements.txt
+    ```
 
 ##### Using System Packages
 
 ###### Debian and Ubuntu (Tested in Ubuntu 20.04)
 
-sudo apt install python3-wxgtk4.0 python3-numpy python3-scipy python3-pil python3-matplotlib python3-skimage python3-nibabel python3-serial python3-psutil python3-vtk7 python3-vtkgdcm python3-gdcm cython3 python3-h5py python3-imageio python3-keras python3-pubsub
+`sudo apt install python3-wxgtk4.0 python3-numpy python3-scipy python3-pil python3-matplotlib python3-skimage python3-nibabel python3-serial python3-psutil python3-vtk7 python3-vtkgdcm python3-gdcm cython3 python3-h5py python3-imageio python3-keras python3-pubsub`
 
 Ubuntu don't have PlaidML in their repositories, so install it using **pip**:
 
-pip3 install --user plaidml-keras
+`pip3 install --user plaidml-keras`
 
 ##### Fedora (Tested in Fedora 32)
 
-sudo dnf install gcc gcc-g++ python3-wxpython4 python3-numpy python3-scipy python3-matplotlib python3-scikit-image python3-nibabel python3-pyserial python3-psutil python3-vtk python3-gdcm python3-Cython python3-h5py python3-pypubsub
+`sudo dnf install gcc gcc-g++ python3-wxpython4 python3-numpy python3-scipy python3-matplotlib python3-scikit-image python3-nibabel python3-pyserial python3-psutil python3-vtk python3-gdcm python3-Cython python3-h5py python3-pypubsub`
 
 Unfortunately, Fedora doesn't have **python3-imageio** package. But it's possible to install it using **pip**:
 
-pip3 install --user imageio
+`pip3 install --user imageio`
 
 Fedora don't have PlaidML in their repositories, so install it using **pip**:
 
-pip3 install --user plaidml-keras
+`pip3 install --user plaidml-keras`
 
 ##### Arch Linux
 
-sudo pacman -S cython python-pip python-numpy python-scipy python-scikit-learn python-wxpython python-pyserial python-psutil python-h5py python-pypubsub python-mpi4py python-matplotlib vtk clinfo opencl-headers gdal glew hdf5 jsoncpp netcdf pdal pugixml proj
+`sudo pacman -S cython python-pip python-numpy python-scipy python-scikit-learn python-wxpython python-pyserial python-psutil python-h5py python-pypubsub python-mpi4py python-matplotlib vtk clinfo opencl-headers gdal glew hdf5 jsoncpp netcdf pdal pugixml proj`
 
 You have to install some packages from AUR, I'm using Pikaur to install them:
 
-pikaur -S --noconfirm gdcm python-nibabel python-scikit-image python-imageio python-plaidml python-plaidml-keras
+`pikaur -S --noconfirm gdcm python-nibabel python-scikit-image python-imageio python-plaidml python-plaidml-keras`
 
 #### Building the Cython Modules
 
-Enter on invesalius3 folder and execute: python3 setup.py build_ext --inplace
+Enter on invesalius3 folder and execute: `python3 setup.py build_ext --inplace`
 
 #### Running InVesalius
 
 To run InVesalius, enter the InVesalius folder and run the command:
 
-python3 app.py
+`python3 app.py`
 
 You can pass a DICOM folder as parameter to make InVesalius starts with the DICOM loaded.
 
-python3 app.py -i /dicom/folder
+`python3 app.py -i /dicom/folder`
 
 It's possible to make InVesalius load a DICOM folder,
 create a surface (mesh) with the given threshold and export the surface to an STL file without loading any GUI:
 
-python3 app.py --no-gui -i /media/thiago/Documentos/dcm/0051 -t 200,3033 -e /tmp/0051.stl
+`python3 app.py --no-gui -i /media/thiago/Documentos/dcm/0051 -t 200,3033 -e /tmp/0051.stl`
