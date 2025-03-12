@@ -1,174 +1,245 @@
 # Installation
-<br/>
-The developer version of InVesalius runs on Windows, macOS, and Linux operating systems. 
-On this page, instructions to installing and running InVesalius on these systems can be found.
+
+The developer version of InVesalius runs on Windows, macOS, and Linux operating systems.
+On this page, instructions for installing and running InVesalius on these systems can be found.
 
 ## Windows
 
-These instructions are tested on Windows 10 64 bits.
-The packages required by InVesalius can be installed either through a Python system 
-installation or the Anaconda package manager.
-In both cases, the following prerequisites apply:
+These instructions are tested on Windows 10 64-bit.
+The packages required by InVesalius can be installed either through a Python system
+installation, the Anaconda package manager, or using `uv`.
+In all cases, the following prerequisites apply:
 
 ### Prerequisites
+
 - Visual Studio (We are using the 2019 community edition).
   - It's possible to install using [chocolatey](https://chocolatey.org/):
-     ```shell
-      choco install -y visualstudio2019buildtools
-      choco install -y visualstudio2019-workload-vctools
-     ```
+    ```shell
+     choco install -y visualstudio2019buildtools
+     choco install -y visualstudio2019-workload-vctools
+    ```
 - Download InVesalius source code.
-   ```bash
-   git clone --recurse-submodules https://github.com/invesalius/invesalius3
+  ```bash
+  git clone --recurse-submodules https://github.com/invesalius/invesalius3
+  ```
+
+### Installation Options
+
+#### Option 1: Using `uv` (Recommended)
+
+`uv` is a modern Python package manager that ensures better dependency management. Follow these steps:
+
+1. Install `uv` on Windows using:
+
+   ```shell
+   winget install --id=astral-sh.uv  -e
    ```
 
-### Python Installation
+2. Navigate to the cloned InVesalius directory:
 
-Install the InVesalius either with Python system OR Anaconda.
+   ```shell
+   cd invesalius3
+   ```
 
-#### Option 1: Python System Installation
+3. Install dependencies and compile Cython extensions automatically:
+
+   ```shell
+   uv sync
+   ```
+
+4. Run InVesalius:
+
+   ```shell
+   uv run app.py
+   ```
+
+**Tip**: To install additional dependencies, use:
+
+```shell
+uv add <dependency-name>
+```
+
+#### Option 2: Python System Installation
 
 1. Download and install Python 3.8 from the [Python website](https://www.python.org/downloads/).
 
-2. Install InVesalius main dependencies (**WXPython**, **numpy**, **scipy**, **scikit-image**,
-**ImageIO**, **H5Py**, **Pillow**, **Pyserial**, **PSUtil**, **nibabel**, **configparser**, 
-**PyPubsub**, **plaidml** and **Cython**) using pip:
+2. Create a virtual environment using
 
-```shell
-pip install -r requirements.txt
-```
+   ```shell
+   python3 -m venv .venv
+   ```
 
-3. If you are going to use the neuronavigation features, install the wrappers to the tracking devices:
+3. Activate the virtual environment using
 
-```shell
-pip install pyclaron polhemusFT polhemus pypolaris pypolarisP4
-```
+   ```shell
+   .venv\bin\activate
+   ```
 
-4. **Optional:** To take advantage of the real-time tractography computation during neuronavigation, 
-the package [Trekker](https://dmritrekker.github.io/) is required. 
-The following command downloads and install the pre-generated wheel for Python 3.7:
+4. Install InVesalius main dependencies and compile cython extensions using pip:
 
-```shell
-pip install https://github.com/dmritrekker/trekker/raw/master/binaries/Trekker-0.9-cp38-cp38-win_amd64.whl
-```
+   ```shell
+   pip install -e .
+   ```
 
-#### Option 2: Anaconda Installation
+5. If you are going to use the neuronavigation features, install the wrappers for tracking devices:
+
+   ```shell
+   pip install pyclaron polhemusFT polhemus pypolaris pypolarisP4
+   ```
+
+6. **Optional:** To enable real-time tractography computation, install [Trekker](https://dmritrekker.github.io/):
+
+   ```shell
+   pip install https://github.com/dmritrekker/trekker/raw/master/binaries/Trekker-0.9-cp38-cp38-win_amd64.whl
+   ```
+
+#### Option 3: Anaconda Installation
 
 1. Install [Anaconda](https://www.anaconda.com/products/individual), preferably the 64-bit version.
 
-2. In the Anaconda Powershell, navigate to the cloned InVesalius source code folder, for example:
+2. In the Anaconda Powershell, navigate to the cloned InVesalius source code folder:
 
-```shell
-cd C:\Users\%USERNAME%\repository\invesalius3\
-```
+   ```shell
+   cd C:\Users\%USERNAME%\repository\invesalius3\
+   ```
 
-3. Install the required packages with the following command:
+3. Install the required packages:
 
-```shell
-conda env create -f environment.yml --name invesalius
-```
+   ```shell
+   conda env create -f environment.yml --name invesalius
+   ```
 
-This will create a virtual environment named **invesalius**. To activate it:
+4. Activate the virtual environment:
 
-```shell
-conda activate invesalius
-```
+   ```shell
+   conda activate invesalius
+   ```
 
-### Compiling InVesalius
+5. Compiling InVesalius:
 
-Some algorithms of InVesalius are written in Cython for performance. It's needed to compile them. 
-Open the command prompt of your Visual Studio and go to the InVesalius source code directory, 
-then compile using this command:
+   Some algorithms of InVesalius are written in Cython for performance. These need to be compiled manually:
 
-```shell
-python setup.py build_ext --inplace
-```
+   ```shell
+   python setup.py build_ext --inplace
+   ```
 
 ### Running InVesalius
 
-Inside InVesalius source code directory run: 
+Inside the InVesalius source code directory, run:
 
-```
+```shell
 python app.py
+
 ```
 
-Warning: If using Anaconda, remember to always open the Anaconda Powershell and activate the 
-environment before running the above command.
+**Warning:** If using Anaconda or pip , always activate the environment using `.venv\bin\activate` before running the command.
 
+If using `uv`, simply run:
+
+```shell
+uv run app.py
+```
 
 ## MacOS
 
-This guide is based on **High Sierra**. 
+This guide is based on **High Sierra**.
 
 ### Prerequisites
 
-The first step is the installation of **homebrew**. 
+The first step is the installation of **homebrew**.
 Access the homebrew site to know how to [install it](http://brew.sh/).
 
-We recommend installing the python3 from brew, also install **OpenMP** (we use it):
+We recommend installing Python 3 from brew, and also installing **OpenMP** (we use it):
 
-```
+```sh
 brew install python3 libomp
 ```
 
-If you are working with an Apple Silicon Mac, you also have to install the `hdf5`:
+If you are working with an Apple Silicon Mac, you also have to install `hdf5`:
 
-```
+```sh
 brew install hdf5
 ```
 
 Clone **InVesalius 3** using git:
 
-```bash
+```sh
 git clone --recurse-submodules https://github.com/invesalius/invesalius3
 ```
+
 ### Installation
 
-To run the following commands your shell must be inside the `InVesalius` folder:
+To run the following commands, ensure your shell is inside the `InVesalius` folder:
 
-```
+```sh
 cd invesalius3
 ```
-    
-Install InVesalius main dependencies **wxpython**, **numpy**, **scipy**, **VTK**, **GDCM**, **imageio**, 
-**scikit-image**, **Pillow**, **Pyserial**, **PSUtil**, **nibabel**, **configparser**, **H5py**, **PyPubsub** 
-and **plaidml** using pip:
 
-1. If using Mac with Intel:
+#### Preferred Installation Method (Using `uv`)
 
-```shell
+We have transitioned to using `uv` for dependency management and `scikit-build-core` with CMake for compiling Cython modules.
+
+1. Install `uv`:
+
+   ```sh
+   brew install uv
+   ```
+
+2. Sync dependencies:
+
+   a) First-time installation (or when compiling Cython extensions):
+
+   ```sh
+   OpenMP_ROOT=$(brew --prefix)/opt/libomp uv sync
+   ```
+
+   b) For subsequent dependency synchronization (when Cython compilation is not needed):
+
+   ```sh
+   uv sync
+   ```
+
+#### Alternative Installation Method (Legacy `pip` Workflow)
+
+Install dependencies using:
+
+```sh
 pip3 install -r requirements.txt
 ```
 
-2. If using Mac with Apple Silicon:
+##### Compiling InVesalius (Legacy)
 
-```
-pip3 install -r requirements_m1.txt
-```
-### Compiling InVesalius
+If you are using a Mac with Apple Silicon, export the following environment variables before compiling:
 
-If you are using Mac with Apple Silicon, you need to export some environment variable before the next step:
-
-```
+```sh
 export CFLAGS="-I/opt/homebrew/opt/libomp/include"
 export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
 export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
 ```
 
-Compile the cython packages used by InVesalius:
+Compile the Cython packages used by InVesalius:
 
-```shell
+```sh
 python3 setup.py build_ext --inplace
 ```
-### Running Invesalius
-    
-Now your system is ready to run InVesalius directly from the source code. Just enter the InVesalius 3 source and run it.
 
+### Running InVesalius
+
+#### Preferred Method (Using `uv`)
+
+After installation, launch InVesalius with:
+
+```sh
+uv run app.py
 ```
+
+#### Alternative Method (Using Python Directly)
+
+```sh
 python3 app.py
 ```
 
-If you have this error:
+If you encounter the following error:
 
 ```
 This program needs access to the screen. Please run with a
@@ -176,9 +247,9 @@ Framework build of python, and only when you are logged in
 on the main display of your Mac.
 ```
 
-Run InVesalius using this command:
+Run InVesalius using:
 
-```
+```sh
 pythonw app.py
 ```
 
@@ -192,7 +263,7 @@ InVesalius is already packaged and is in the main repos from Debian and Ubuntu. 
 sudo apt install invesalius
 ```
 
-If you want the most updated packages, there is 
+If you want the most updated packages, there is
 also a [PPA](https://launchpad.net/~tfmoraes/+archive/ubuntu/invesalius) to Ubuntu:
 
 ```shell
@@ -209,7 +280,7 @@ invesalius3
 
 ### Other Distros
 
-InVesalius is packaged as [Flatpak](https://flathub.org/apps/details/br.gov.cti.invesalius). 
+InVesalius is packaged as [Flatpak](https://flathub.org/apps/details/br.gov.cti.invesalius).
 First, you need to add the Flathub repo:
 
 ```shell
@@ -242,7 +313,8 @@ git clone --recurse-submodules https://github.com/invesalius/invesalius3
 
 First, you have to install some system packages to compile wxPython and H5py:
 
-* Fedora (tested on Fedora 34)
+- Fedora (tested on Fedora 34)
+
 ```bash
 sudo dnf -y install \
     gcc-c++ \
@@ -262,7 +334,9 @@ sudo dnf -y install \
     which \
     hdf5-devel
 ```
-* Ubuntu (tested on Ubuntu 20.10 and 21.04)
+
+- Ubuntu (tested on Ubuntu 20.10 and 21.04)
+
 ```bash
 sudo apt install -y \
     freeglut3 \
@@ -284,7 +358,7 @@ sudo apt install -y \
     python3-venv
 ```
 
-* Arch
+- Arch
 
 ```bash
 sudo pacman -syu \
@@ -294,25 +368,48 @@ sudo pacman -syu \
     webkit2gtk
 ```
 
-It's recommended to create a virtualenv:
+It's recommended to create a virtualenv
 
-```bash
-# Go to InVesalius folder
-cd invesalius3
-# Create my_env environment
-python3 -m venv my_env
-# Activate it every time you want to run InVesalius
-source my_env/bin/activate
-pip install -r requirements.txt
-```
+1.  using `uv` (Preferred Method):
 
+    ```bash
+    # Go to InVesalius folder
+    cd invesalius3
 
+    # Create .venv environment
+    uv venv
+
+    # Install dependencies and build cython extensions
+    uv sync
+    ```
+
+    Tip: To add extra dependencies to the project use:
+
+    ```bash
+    uv add <dependency-name>
+    ```
+
+2.  using `pip`:
+
+    ```bash
+    # Go to InVesalius folder
+    cd invesalius3
+
+    # Create my_env environment
+    python3 -m venv .venv
+
+    # Activate it every time you want to run InVesalius
+    source my_env/bin/activate
+
+    #Install dependencies and build cython extensions
+    pip install -e .
+    ```
 
 ##### Using System Packages
 
 ###### Debian and Ubuntu (Tested in Ubuntu 20.04)
 
-`sudo apt install python3-wxgtk4.0 python3-numpy python3-scipy python3-pil python3-matplotlib python3-skimage python3-nibabel python3-serial python3-psutil python3-vtk7 python3-vtkgdcm python3-gdcm cython3 python3-h5py python3-imageio python3-keras python3-pubsub` 
+`sudo apt install python3-wxgtk4.0 python3-numpy python3-scipy python3-pil python3-matplotlib python3-skimage python3-nibabel python3-serial python3-psutil python3-vtk7 python3-vtkgdcm python3-gdcm cython3 python3-h5py python3-imageio python3-keras python3-pubsub`
 
 Ubuntu don't have PlaidML in their repositories, so install it using **pip**:
 
@@ -338,24 +435,39 @@ You have to install some packages from AUR, I'm using Pikaur to install them:
 
 `pikaur -S --noconfirm gdcm python-nibabel python-scikit-image python-imageio python-plaidml python-plaidml-keras`
 
-#### Building the Cython Modules
-
-Enter on invesalius3 folder and execute: `python3 setup.py build_ext --inplace`
-
 #### Running InVesalius
 
-To run InVesalius, enter the InVesalius folder and run the command:
+To run InVesalius, enter the InVesalius folder and use one of the following commands:
 
-`python3 app.py`
+If using `uv`, run this command:
 
-You can pass a DICOM folder as parameter to make InVesalius starts with the DICOM loaded.
+```sh
+uv run app.py
+```
+
+If using `pip`,run this command:
+
+```sh
+python3 app.py
+```
+
+You can pass a DICOM folder as a parameter to make InVesalius start with the DICOM loaded.
+
+Using `uv`:
+
+`uv run app.py -i /dicom/folder`
+
+Using Python:
 
 `python3 app.py -i /dicom/folder`
 
-It's possible to make InVesalius load a DICOM folder, 
-create a surface (mesh) with the given threshold and export the surface to an STL file without loading any GUI:
+It's possible to make InVesalius load a DICOM folder,  
+create a surface (mesh) with the given threshold, and export the surface to an STL file without loading any GUI:
+
+Using `uv`:
+
+`uv run app.py --no-gui -i /media/thiago/Documentos/dcm/0051 -t 200,3033 -e /tmp/0051.stl`
+
+Using Python:
 
 `python3 app.py --no-gui -i /media/thiago/Documentos/dcm/0051 -t 200,3033 -e /tmp/0051.stl`
-
-
-
